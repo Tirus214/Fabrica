@@ -1,0 +1,20 @@
+#ifndef BANDAMH_H
+#define BANDAMH_H
+#include <QApplication>
+#include <QtCore>
+#include <QtDebug>
+
+class BandaMH : public QThread{
+    int cantMin;
+    int cantMax;
+    int velocidad;
+    
+public:
+    BandaMH(){
+        cantMax = 0;
+        cantMin = 0;
+        velocidad = 0;
+    }
+};
+
+#endif // BANDAMH_H

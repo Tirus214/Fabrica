@@ -1,0 +1,14 @@
+release/almacen.o
+release/carrito.o
+release/dialogalmacen.o
+release/listadoblecircular.o
+release/main.o
+release/mainwindow.o
+release/mezcladora.o
+release/nodopaquete.o
+release/paquete.o
+release/planificador.o
+release/receta.o
+release/qrc_Recursos.o
+release/moc_dialogalmacen.o
+release/moc_mainwindow.o

@@ -1,0 +1,14 @@
+debug/almacen.o
+debug/carrito.o
+debug/dialogalmacen.o
+debug/listadoblecircular.o
+debug/main.o
+debug/mainwindow.o
+debug/mezcladora.o
+debug/nodopaquete.o
+debug/paquete.o
+debug/planificador.o
+debug/receta.o
+debug/qrc_Recursos.o
+debug/moc_dialogalmacen.o
+debug/moc_mainwindow.o

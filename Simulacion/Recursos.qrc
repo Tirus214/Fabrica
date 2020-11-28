@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/imagenes">
+        <file>ImagenesProyectoED/almacenMateria.png</file>
+        <file>ImagenesProyectoED/mezcladora.png</file>
+        <file>ImagenesProyectoED/montacarga_seguridad.png</file>
+        <file>ImagenesProyectoED/mezcladoraMasa.png</file>
+        <file>ImagenesProyectoED/bandaTransportadora.png</file>
+    </qresource>
+</RCC>
