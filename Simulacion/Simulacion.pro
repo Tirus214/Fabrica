@@ -20,11 +20,15 @@ SOURCES += \
     fabirca.cpp \
     horno.cpp \
     listadoblecircular.cpp \
+    listasimplestring.cpp \
+    listasimpletransporte.cpp \
     main.cpp \
     mainwindow.cpp \
     mezcladora.cpp \
     nodocola.cpp \
     nodopaquete.cpp \
+    nodostring.cpp \
+    nodotransporte.cpp \
     paquete.cpp \
     planificador.cpp \
     receta.cpp \
@@ -43,10 +47,14 @@ HEADERS += \
     fabirca.h \
     horno.h \
     listadoblecircular.h \
+    listasimplestring.h \
+    listasimpletransporte.h \
     mainwindow.h \
     mezcladora.h \
     nodocola.h \
     nodopaquete.h \
+    nodostring.h \
+    nodotransporte.h \
     paquete.h \
     planificador.h \
     receta.h \
