@@ -51,10 +51,7 @@ NodoCola* Cola::desencolar(void)
 
 bool Cola::vacia (void)
 {
-     if (frente == NULL)
-        return true;
-     else
-         return false;
+     return frente == NULL;
 }
 
 

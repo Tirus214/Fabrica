@@ -11,12 +11,13 @@
 
 
 struct Fabirca {
+    int GalletasFaltantes;
     Planificador * planificador;
     Almacen * almacen;
     Carrito * carrito;
-    Mezcladora * mezcaldora1;
-    Mezcladora * mezcaldora2;
-    Mezcladora * mezcaldora3;
+    Mezcladora * mezcladora1;
+    Mezcladora * mezcladora2;
+    Mezcladora * mezcladora3;
     Banda * banda1;
     Banda * banda2;
     Horno * horno;
@@ -25,28 +26,64 @@ struct Fabirca {
     Supervisor * supervisor2;
     Empacadora * empacadora;
 
-    int totalGalletas;
-
     Fabirca(){
         planificador = new Planificador();
         almacen = new Almacen();
         carrito = new Carrito();
-        mezcaldora1 = new Mezcladora();
-        mezcaldora2 = new Mezcladora();
-        mezcaldora3 = new Mezcladora();
+        mezcladora1 = new Mezcladora();
+        mezcladora2 = new Mezcladora();
+        mezcladora3 = new Mezcladora();
         banda1 = new Banda();
         banda2 = new Banda();
         horno = new Horno();
+        banda3 = new Banda();
         supervisor1 = new Supervisor();
         supervisor2 = new Supervisor();
         empacadora = new Empacadora();
-
-        setElementos();
-        totalGalletas = 0;
     }
 
     void setElementos();
     void correr();
+
+    void setPlanificador(int cantGalletas, QString nombre, int cantPaquetes){
+        planificador->addPeticion(cantGalletas, nombre, cantPaquetes);
+    }
+
+    void setCarrito(int cantMin, int cantMax, double velocidad){
+        carrito->cantMin = cantMin;
+        carrito->cantMax = cantMax;
+        carrito->velocidad = velocidad;
+    }
+
+    void setMezcladoraHarina1(int cantMax, int cantMin, double velocidad){
+        mezcladora1->cantMax = cantMax;
+        mezcladora1->cantMin = cantMin;
+        mezcladora1->velocidad = velocidad;
+    }
+
+    void setMezcladoraHarina2(int cantMax, int cantMin, double velocidad){
+        mezcladora2->cantMax = cantMax;
+        mezcladora2->cantMin = cantMin;
+        mezcladora2->velocidad = velocidad;
+    }
+
+    void setMezcladoraChoc(int cantMax, int cantMin, double velocidad){
+        mezcladora3->cantMax = cantMax;
+        mezcladora3->cantMin = cantMin;
+        mezcladora3->velocidad = velocidad;
+    }
+
+    void setBanda1(int cantMax){
+        banda1->cantMax = cantMax;
+    }
+
+    void setBanda2(int cantMax){
+        banda2->cantMax = cantMax;
+    }
+
+    void setSupervisor(double velocidad){
+        supervisor1->
+    }
 
 };
 

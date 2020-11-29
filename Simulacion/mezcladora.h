@@ -20,6 +20,7 @@ public:
         cantMin = 0;
         velocidad = 0.0;
         mezcla = 0;
+        carro = new Carrito();
         running = true;
     }
 

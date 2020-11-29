@@ -11,7 +11,7 @@ public:
     QString ingrediente;
     int cantMax;
     int cantMin;
-    int velocidad;
+    double velocidad;
     bool running;
     Almacen * almacen;
     Mezcladora * mezcladora;
@@ -19,7 +19,7 @@ public:
     Carrito(){
         cantMax = 0;
         cantMin = 0;
-        velocidad = 0;
+        velocidad = 0.0;
         almacen = new Almacen();
         mezcladora = new Mezcladora();
         running = true;

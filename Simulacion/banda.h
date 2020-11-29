@@ -6,16 +6,18 @@
 #include "cola.h"
 #include "mezcladora.h"
 #include "horno.h"
+#include "empacadora.h"
 
 class Banda : public QThread{
 public:
     Cola * cola;
     int cantMax;
     int index;
-    int velocidad;
+    double velocidad;
     Mezcladora * mezcladora1;
     Mezcladora * mezcladora2;
     Horno * horno;
+    Empacadora * empacadora;
 
     Banda(){
         cola = new Cola();
@@ -25,7 +27,24 @@ public:
         mezcladora1 = new Mezcladora();
         mezcladora2 = new Mezcladora();
         horno = new Horno();
+        empacadora = new Empacadora();
      }
+
+    bool isFull(){
+        return index == cantMax;
+    }
+
+    void encolar(int dato){
+        if(index < cantMax){
+           cola->encolar(dato);
+           index++;
+        }
+    }
+
+    int desencolar(){
+        return cola->desencolar()->dato;
+        index--;
+    }
 };
 
 #endif // BANDAEH_H
