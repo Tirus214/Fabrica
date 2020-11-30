@@ -1,7 +1,8 @@
-#include <QMainWindow>
-#include "dialogalmacen.h"
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include <QMainWindow>
+#include "dialogalmacen.h"
+
 
 
 

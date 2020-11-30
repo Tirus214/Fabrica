@@ -1,3 +1,5 @@
+#ifndef FABIRCA_H
+#define FABIRCA_H
 #include "almacen.h"
 #include "planificador.h"
 #include "carrito.h"
@@ -6,12 +8,11 @@
 #include "horno.h"
 #include "supervisor.h"
 #include "empacadora.h"
-#ifndef FABIRCA_H
-#define FABIRCA_H
 
 
 
-struct Fabirca {
+
+struct Fabrica {
     int GalletasFaltantes;
     Planificador * planificador;
     Almacen * almacen;
@@ -27,7 +28,7 @@ struct Fabirca {
     Supervisor * supervisor2;
     Empacadora * empacadora;
 
-    Fabirca(){
+    Fabrica(){
         planificador = new Planificador();
         almacen = new Almacen();
         carrito = new Carrito();

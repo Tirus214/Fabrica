@@ -1,7 +1,8 @@
-#include <QApplication>
-#include "receta.h"
 #ifndef PAQUETE_H
 #define PAQUETE_H
+#include <QApplication>
+#include "receta.h"
+
 
 
 struct Paquete{

@@ -1,6 +1,7 @@
-#include "nodocola.h"
 #ifndef COLA_H
 #define COLA_H
+#include "nodocola.h"
+
 
 
 struct Cola {

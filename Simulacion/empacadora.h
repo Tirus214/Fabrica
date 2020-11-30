@@ -1,3 +1,5 @@
+#ifndef EMPACADORA_H
+#define EMPACADORA_H
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
@@ -5,8 +7,7 @@
 #include "planificador.h"
 #include "banda.h"
 #include "listasimpletransporte.h"
-#ifndef EMPACADORA_H
-#define EMPACADORA_H
+
 
 
 

@@ -1,7 +1,6 @@
-#include "receta.h"
 #ifndef ALMACEN_H
 #define ALMACEN_H
-
+#include "receta.h"
 
 
 struct Almacen{

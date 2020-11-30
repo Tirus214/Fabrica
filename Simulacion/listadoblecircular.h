@@ -1,6 +1,7 @@
-#include "nodopaquete.h"
 #ifndef LISTADOBLECIRCULAR_H
 #define LISTADOBLECIRCULAR_H
+#include "nodopaquete.h"
+
 
 
 

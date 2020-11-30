@@ -1,4 +1,4 @@
-#include "fabirca.h"
+#include "fabrica.h"
 
 void Fabirca::setElementos(){
     carrito->almacen = almacen;

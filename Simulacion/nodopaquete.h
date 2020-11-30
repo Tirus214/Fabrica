@@ -1,6 +1,7 @@
-#include "paquete.h"
 #ifndef NODOPAQUETE_H
 #define NODOPAQUETE_H
+#include "paquete.h"
+
 
 
 

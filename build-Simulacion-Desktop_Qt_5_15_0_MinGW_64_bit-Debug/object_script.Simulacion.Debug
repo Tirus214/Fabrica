@@ -6,7 +6,7 @@ debug/carrito.o
 debug/cola.o
 debug/dialogalmacen.o
 debug/empacadora.o
-debug/fabirca.o
+debug/fabrica.o
 debug/horno.o
 debug/listadoblecircular.o
 debug/listasimplestring.o

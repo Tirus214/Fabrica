@@ -17,7 +17,7 @@ SOURCES += \
     cola.cpp \
     dialogalmacen.cpp \
     empacadora.cpp \
-    fabirca.cpp \
+    fabrica.cpp \
     horno.cpp \
     listadoblecircular.cpp \
     listasimplestring.cpp \
@@ -44,7 +44,7 @@ HEADERS += \
     cola.h \
     dialogalmacen.h \
     empacadora.h \
-    fabirca.h \
+    fabrica.h \
     horno.h \
     listadoblecircular.h \
     listasimplestring.h \

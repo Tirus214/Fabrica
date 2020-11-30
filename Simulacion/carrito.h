@@ -1,10 +1,11 @@
+#ifndef CARRITO_H
+#define CARRITO_H
 #include "almacen.h"
 #include "mezcladora.h"
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
-#ifndef CARRITO_H
-#define CARRITO_H
+
 
 
 class Carrito : public QThread{

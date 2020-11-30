@@ -1,9 +1,10 @@
+#ifndef MEZCLADORA_H
+#define MEZCLADORA_H
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
 #include "carrito.h"
-#ifndef MEZCLADORA_H
-#define MEZCLADORA_H
+
 
 
 class Mezcladora : public QThread {

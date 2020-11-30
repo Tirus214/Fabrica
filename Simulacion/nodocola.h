@@ -1,6 +1,7 @@
-#include <QApplication>
 #ifndef NODOCOLA_H
 #define NODOCOLA_H
+#include <QApplication>
+
 
 
 struct NodoCola {
