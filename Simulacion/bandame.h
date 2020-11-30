@@ -7,7 +7,6 @@
 #include "mezcladora.h"
 
 
-
 class BandaME : public QThread{
 public:
     Cola * cola;

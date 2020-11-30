@@ -6,8 +6,8 @@
 #include "cola.h"
 #include "ensambladora.h"
 
-
-class BandaEH : public QThread {
+class BandaEH
+{
 public:
     Cola * cola;
     int cantMax;
@@ -15,8 +15,8 @@ public:
     double velocidad;
     Ensambladora * ensambladora;
 
+    // Constructores
 
-    // Constructor
     BandaEH(){
         cola = new Cola();
         cantMax = 10;
@@ -26,6 +26,7 @@ public:
      }
 
     // Metodos
+
     bool isFull(){
         return index == cantMax;
     }
@@ -44,6 +45,7 @@ public:
         }
         return 0;
     }
+
 };
 
 #endif // BANDAEH_H

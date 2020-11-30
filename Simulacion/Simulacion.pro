@@ -11,6 +11,8 @@ CONFIG += c++11
 SOURCES += \
     almacen.cpp \
     almacenfinal.cpp \
+    bandaeh.cpp \
+    bandahe.cpp \
     bandame.cpp \
     bandeja.cpp \
     carrito.cpp \
@@ -39,6 +41,8 @@ SOURCES += \
 HEADERS += \
     almacen.h \
     almacenfinal.h \
+    bandaeh.h \
+    bandahe.h \
     bandame.h \
     bandeja.h \
     carrito.h \

@@ -6,8 +6,7 @@
 #include "cola.h"
 #include "horno.h"
 
-
-class BandaHE : public QThread
+class BandaHE
 {
 public:
     Cola * cola;
@@ -23,6 +22,7 @@ public:
         cantMax = 10;
         index = 0;
         velocidad = 10;
+        horno = new Horno();
      }
 
     // Metodos
@@ -45,6 +45,7 @@ public:
         }
         return 0;
     }
+
 };
 
 #endif // BANDAHE_H
