@@ -1,6 +1,7 @@
+
+#include "listadoblecircular.h"
 #ifndef ALMACENFINAL_H
 #define ALMACENFINAL_H
-#include "listadoblecircular.h"
 
 
 struct AlmacenFinal{

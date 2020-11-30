@@ -1,6 +1,7 @@
+#include "transporte.h"
 #ifndef NODOTRANSPORTE_H
 #define NODOTRANSPORTE_H
-#include "transporte.h"
+
 
 
 struct NodoTransporte{

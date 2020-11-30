@@ -1,6 +1,7 @@
+#include <QApplication>
 #ifndef NODOCOLA_H
 #define NODOCOLA_H
-#include <QApplication>
+
 
 struct NodoCola {
        int dato; // parte de datos

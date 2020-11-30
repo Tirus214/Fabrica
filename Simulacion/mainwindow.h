@@ -1,8 +1,9 @@
+#include <QMainWindow>
+#include "dialogalmacen.h"
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-#include "dialogalmacen.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

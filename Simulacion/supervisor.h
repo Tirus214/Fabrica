@@ -1,10 +1,11 @@
-#ifndef SUPERVISOR_H
-#define SUPERVISOR_H
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
 #include "banda.h"
 #include "QRandomGenerator64"
+#ifndef SUPERVISOR_H
+#define SUPERVISOR_H
+
 
 
 class Supervisor : public QThread{

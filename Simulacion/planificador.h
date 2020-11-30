@@ -1,7 +1,8 @@
-#ifndef PLANIFICADOR_H
-#define PLANIFICADOR_H
 #include "listadoblecircular.h"
 #include "listasimplestring.h"
+#ifndef PLANIFICADOR_H
+#define PLANIFICADOR_H
+
 
 
 struct Planificador{

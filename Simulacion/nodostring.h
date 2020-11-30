@@ -1,6 +1,7 @@
+#include <QApplication>
 #ifndef NODOSTRING_H
 #define NODOSTRING_H
-#include <QApplication>
+
 
 
 struct NodoString{

@@ -9,11 +9,15 @@ release/empacadora.o
 release/fabirca.o
 release/horno.o
 release/listadoblecircular.o
+release/listasimplestring.o
+release/listasimpletransporte.o
 release/main.o
 release/mainwindow.o
 release/mezcladora.o
 release/nodocola.o
 release/nodopaquete.o
+release/nodostring.o
+release/nodotransporte.o
 release/paquete.o
 release/planificador.o
 release/receta.o

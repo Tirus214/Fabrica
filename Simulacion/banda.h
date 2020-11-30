@@ -1,5 +1,3 @@
-#ifndef BANDAEH_H
-#define BANDAEH_H
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
@@ -7,6 +5,9 @@
 #include "mezcladora.h"
 #include "horno.h"
 #include "empacadora.h"
+#ifndef BANDAEH_H
+#define BANDAEH_H
+
 
 class Banda : public QThread{
 public:

@@ -1,6 +1,7 @@
+#include "nodostring.h"
 #ifndef LISTASIMPLESTRING_H
 #define LISTASIMPLESTRING_H
-#include "nodostring.h"
+
 
 
 struct ListaSimpleString{

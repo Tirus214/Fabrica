@@ -1,11 +1,12 @@
-#ifndef TRANSPORTE_H
-#define TRANSPORTE_H
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
 #include "listadoblecircular.h"
 #include "almacenfinal.h"
 #include "empacadora.h"
+#ifndef TRANSPORTE_H
+#define TRANSPORTE_H
+
 
 
 class Transporte : public QThread{

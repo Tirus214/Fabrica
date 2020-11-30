@@ -1,10 +1,11 @@
-#ifndef HORNO_H
-#define HORNO_H
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
 #include "bandeja.h"
 #include "banda.h"
+#ifndef HORNO_H
+#define HORNO_H
+
 
 class Horno : public QThread{
 public:
