@@ -1,20 +1,49 @@
-#ifndef BANDAMH_H
-#define BANDAMH_H
+#ifndef BANDAME_H
+#define BANDAME_H
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
+#include "cola.h"
+#include "mezcladora.h"
+
+
 
 class BandaME : public QThread{
-    int cantMin;
-    int cantMax;
-    int velocidad;
-
 public:
+    Cola * cola;
+    int cantMax;
+    int index;
+    double velocidad;
+    Mezcladora * mezcladora1;
+    Mezcladora * mezcladora2;
+
     BandaME(){
-        cantMax = 0;
-        cantMin = 0;
-        velocidad = 0;
+        cola = new Cola();
+        cantMax = 10;
+        index = 0;
+        velocidad = 10;
+        mezcladora1 = new Mezcladora();
+        mezcladora2 = new Mezcladora();
+     }
+
+    bool isFull(){
+        return index == cantMax;
+    }
+
+    void encolar(int dato){
+        if(index < cantMax){
+           cola->encolar(dato);
+           index++;
+        }
+    }
+
+    int desencolar(){
+        if(index > 0){
+            return cola->desencolar()->dato;
+            index--;
+        }
+        return 0;
     }
 };
 
-#endif // BANDAMH_H
+#endif // BANDAME_H

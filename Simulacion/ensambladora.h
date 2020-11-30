@@ -2,8 +2,7 @@
 #define ENSAMBLADORA_H
 
 
-class Ensambladora
-{
+class Ensambladora {
 public:
     Ensambladora();
 };
