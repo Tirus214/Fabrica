@@ -18,6 +18,16 @@ public:
     AlmacenFinal * almacen;
     Empacadora * empacadora;
 
+    Transporte(){
+        this->nombre = "";
+        cantMax = 0;
+        cantMin = 0;
+        velocidad = 0.0;
+        lista = new ListaDobleCircular();
+        almacen = new AlmacenFinal();
+        empacadora = new Empacadora();
+    }
+
     Transporte(QString nombre){
         this->nombre = nombre;
         cantMax = 0;
@@ -26,6 +36,10 @@ public:
         lista = new ListaDobleCircular();
         almacen = new AlmacenFinal();
         empacadora = new Empacadora();
+    }
+
+    void addPaquete(Paquete* paquete){
+        lista->insertarAlFinal(paquete);
     }
 
     void run();

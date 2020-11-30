@@ -7,14 +7,12 @@ struct Paquete{
     QString nombre;
     int cantidadGalletas;
     int galletasHechas;
-    Receta * receta;
 
 
     Paquete(QString _nombre, int _cantidad){
         nombre = _nombre;
         cantidadGalletas = _cantidad;
         galletasHechas = 0;
-        receta = new Receta();
     }
 };
 

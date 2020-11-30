@@ -4,7 +4,6 @@
 
 
 struct Almacen{
-    Receta* receta;
     int harina;
     int chocolate;
     int susCod; //Codigo para cada sustraccion de materiales

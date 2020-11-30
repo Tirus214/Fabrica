@@ -42,8 +42,11 @@ public:
     }
 
     int desencolar(){
-        return cola->desencolar()->dato;
-        index--;
+        if(index > 0){
+            return cola->desencolar()->dato;
+            index--;
+        }
+        return 0;
     }
 };
 

@@ -42,11 +42,12 @@ struct Fabirca {
         empacadora = new Empacadora();
     }
 
-    void setElementos();
-    void correr();
-
     void setPlanificador(int cantGalletas, QString nombre, int cantPaquetes){
         planificador->addPeticion(cantGalletas, nombre, cantPaquetes);
+    }
+
+    void setReceta(int harina, int chocolate){
+        planificador->setReceta(harina, chocolate);
     }
 
     void setCarrito(int cantMin, int cantMax, double velocidad){
@@ -73,17 +74,41 @@ struct Fabirca {
         mezcladora3->velocidad = velocidad;
     }
 
-    void setBanda1(int cantMax){
+    void setBanda1(int cantMax, double velocidad){
         banda1->cantMax = cantMax;
+        banda1->velocidad = velocidad;
     }
 
-    void setBanda2(int cantMax){
+    void setBanda2(int cantMax, double velocidad){
         banda2->cantMax = cantMax;
+        banda2->velocidad = velocidad;
     }
 
-    void setSupervisor(double velocidad){
-        supervisor1->
+    void setHorno(int cantMax, double velocidad){
+        for (int i=0; i<6; i++) {
+            horno->bandejas[i]->cantMax = cantMax;
+            horno->bandejas[i]->velocidad = velocidad;
+        }
     }
+
+    void setBanda3(int cantMax, double velocidad){
+        banda3->cantMax = cantMax;
+        banda3->velocidad = velocidad;
+    }
+
+    void setSupervisor1(double velocidad){
+        supervisor1->velocidad = velocidad;
+    }
+
+    void setSupervisor2(double velocidad){
+        supervisor2->velocidad = velocidad;
+    }
+
+    void setEmpacadora(double velocidad){
+        empacadora->velocidad = velocidad;
+    }
+
+    void setElementos();
 
 };
 

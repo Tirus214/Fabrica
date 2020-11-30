@@ -4,4 +4,5 @@ void Planificador::addPeticion(int cantPaquetes, QString nombre, int cantGalleta
     for(int i=0; i<cantPaquetes; i++){
         lista->insertarAlFinal(new Paquete(nombre, cantGalletas));
     }
+    addNombre(nombre);
 }
