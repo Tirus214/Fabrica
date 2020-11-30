@@ -1,6 +1,6 @@
 #include "fabrica.h"
 
-void Fabirca::setElementos(){
+void Fabrica::setElementos(){
     carrito->almacen = almacen;
     mezcladora1->carro = carrito;
     mezcladora2->carro = carrito;
@@ -17,7 +17,7 @@ void Fabirca::setElementos(){
 
 }
 
-void Fabirca::correr(){
+void Fabrica::correr(){
     setElementos();
 
 }

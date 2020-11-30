@@ -833,7 +833,6 @@ debug/bandeja.o: ../Simulacion/bandeja.cpp ../Simulacion/bandeja.h
 debug/carrito.o: ../Simulacion/carrito.cpp ../Simulacion/carrito.h \
 		../Simulacion/almacen.h \
 		../Simulacion/receta.h \
-		../Simulacion/mezcladora.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -1680,7 +1679,6 @@ debug/fabrica.o: ../Simulacion/fabrica.cpp ../Simulacion/fabrica.h \
 		../Simulacion/listasimplestring.h \
 		../Simulacion/nodostring.h \
 		../Simulacion/carrito.h \
-		../Simulacion/mezcladora.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QtCore \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QtCoreDepends \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractanimation.h \
@@ -1807,6 +1805,7 @@ debug/fabrica.o: ../Simulacion/fabrica.cpp ../Simulacion/fabrica.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qxmlstream.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qtcoreversion.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QtDebug \
+		../Simulacion/mezcladora.h \
 		../Simulacion/banda.h \
 		../Simulacion/cola.h \
 		../Simulacion/nodocola.h \
