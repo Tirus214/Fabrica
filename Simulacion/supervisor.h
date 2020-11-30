@@ -3,7 +3,7 @@
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
-#include "banda.h"
+#include "bandahe.h"
 #include "QRandomGenerator64"
 
 
@@ -13,7 +13,7 @@ class Supervisor : public QThread{
 public:
     int galletas;
     double velocidad;
-    Banda * banda;
+    BandaHE * banda;
     int galletasMalas;
     int probabilidad;
     bool running;
@@ -22,7 +22,7 @@ public:
     Supervisor(){
         galletas = 0;
         velocidad = 0.0;
-        banda = new Banda();
+        banda = new BandaHE();
         galletasMalas = 0;
         probabilidad = 0;
         running = true;

@@ -18,6 +18,7 @@ public:
     bool running;
     Almacen * almacen;
     int resultado;
+    bool estado;
 
     Carrito(){
         chocolate = true;
@@ -28,6 +29,7 @@ public:
         running = true;
         peticion = 0;
         resultado = 0;
+        estado = true;
     }
 
     void setAlmacen(Almacen * _almacen);
@@ -54,9 +56,11 @@ public:
     void run(){
         while(running){
             sleep(velocidad/2*1000);
-            if(chocolate) traerChocolate();
-            else traerHarina();
-            sleep(velocidad/2*1000);
+            if(estado){
+                if(chocolate) traerChocolate();
+                else traerHarina();
+                sleep(velocidad/2*1000);
+            }
             putResultado();
         }
     }
