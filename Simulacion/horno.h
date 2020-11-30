@@ -4,21 +4,22 @@
 #include <QtCore>
 #include <QtDebug>
 #include "bandeja.h"
+#include "bandame.h"
 
 
 
 class Horno : public QThread{
 public:
     Bandeja * bandejas[6];
-    //Banda * banda1;
-   // Banda * banda2;
+    BandaME * banda1;
+    BandaME * banda2;
 
     Horno(){
-        for (int i=0; i<6; i++) {
+        for (int i=0; i<6; i++){
             bandejas[i] = new Bandeja();
         }
-       // banda1 = new Banda();
-        //banda2 = new Banda();
+        banda1 = new BandaME();
+        banda2 = new BandaME();
     }
 };
 

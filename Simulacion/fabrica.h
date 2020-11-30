@@ -4,11 +4,10 @@
 #include "planificador.h"
 #include "carrito.h"
 #include "mezcladora.h"
-#include "banda.h"
+#include "bandame.h"
 #include "horno.h"
 #include "supervisor.h"
 #include "empacadora.h"
-
 
 
 
@@ -20,10 +19,10 @@ struct Fabrica {
     Mezcladora * mezcladora1;
     Mezcladora * mezcladora2;
     Mezcladora * mezcladora3;
-    Banda * banda1;
-    Banda * banda2;
+    BandaME * banda1;
+    BandaME * banda2;
     Horno * horno;
-    Banda * banda3;
+    //BandaEH * banda3;
     Supervisor * supervisor1;
     Supervisor * supervisor2;
     Empacadora * empacadora;
@@ -35,10 +34,10 @@ struct Fabrica {
         mezcladora1 = new Mezcladora();
         mezcladora2 = new Mezcladora();
         mezcladora3 = new Mezcladora();
-        banda1 = new Banda();
-        banda2 = new Banda();
+        banda1 = new BandaME();
+        banda2 = new BandaME();
         horno = new Horno();
-        banda3 = new Banda();
+        //banda3 = new BandaEH();
         supervisor1 = new Supervisor();
         supervisor2 = new Supervisor();
         empacadora = new Empacadora();
@@ -93,10 +92,10 @@ struct Fabrica {
         }
     }
 
-    void setBanda3(int cantMax, double velocidad){
+    /*void setBanda3(int cantMax, double velocidad){
         banda3->cantMax = cantMax;
         banda3->velocidad = velocidad;
-    }
+    }*/
 
     void setSupervisor1(double velocidad){
         supervisor1->velocidad = velocidad;
