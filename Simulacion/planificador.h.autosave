@@ -5,6 +5,7 @@
 
 
 struct Planificador{
+    Receta * receta;
     ListaSimpleString * listaNombres;
     ListaDobleCircular * lista;
     int totalGalletas;
@@ -13,6 +14,12 @@ struct Planificador{
         listaNombres = new ListaSimpleString();
         lista = new ListaDobleCircular();
         totalGalletas = 0;
+        receta = new Receta();
+    }
+    
+    void setReceta(int harina, int chocolate){
+        receta->chocolate = chocolate;
+        receta->harina = harina;
     }
 
     void addNombre(QString nombre){
