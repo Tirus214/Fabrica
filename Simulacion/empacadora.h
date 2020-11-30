@@ -6,7 +6,7 @@
 #include "listadoblecircular.h"
 #include "planificador.h"
 #include "listasimpletransporte.h"
-
+#include "bandahe.h"
 
 
 
@@ -20,6 +20,7 @@ public:
     double velocidad;
     int galletas;
     bool running;
+    BandaHE * BandaHornoEmpacadora;
 
     Empacadora(){
         //banda = new Banda();
@@ -67,7 +68,7 @@ public:
         if(nodoPaquete->paquete->galletasHechas == nodoPaquete->paquete->cantidadGalletas){ //si el paquete se lleno incrementa el indice y lo agrega al transporte correspondiente
             index++;
             montarTransporte();
-        } 
+        }
     }
 
     void run(){

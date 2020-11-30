@@ -6,8 +6,7 @@
 #include "cola.h"
 #include "ensambladora.h"
 
-class BandaEH
-{
+class BandaEH : public QThread {
 public:
     Cola * cola;
     int cantMax;

@@ -6,8 +6,7 @@
 #include "cola.h"
 #include "horno.h"
 
-class BandaHE
-{
+class BandaHE : public QThread {
 public:
     Cola * cola;
     int cantMax;
