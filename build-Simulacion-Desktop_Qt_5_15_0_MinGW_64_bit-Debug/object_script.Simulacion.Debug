@@ -1,6 +1,6 @@
 debug/almacen.o
 debug/almacenfinal.o
-debug/banda.o
+debug/bandame.o
 debug/bandeja.o
 debug/carrito.o
 debug/cola.o

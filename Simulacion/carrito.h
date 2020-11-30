@@ -14,6 +14,7 @@ public:
     int cantMin;
     int chocolate;
     int harina;
+    bool peticion;
     double velocidad;
     bool running;
     Almacen * almacen;
@@ -30,7 +31,13 @@ public:
 
     void setAlmacen(Almacen * _almacen);
 
+    void traerChocolate(){
+        cho
+    }
 
-    void run();
+
+    void run(){
+
+    }
 };
 #endif // CARRITO_H

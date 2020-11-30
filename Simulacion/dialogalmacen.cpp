@@ -4,8 +4,8 @@
 
 
 DialogAlmacen::DialogAlmacen(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::DialogAlmacen)
+    QDialog(parent);
+    ui(new Ui::DialogAlmacen);
 {
     ui->setupUi(this);
     ui->lblCantidad->setText("Cantidad de mezcla restante: ");

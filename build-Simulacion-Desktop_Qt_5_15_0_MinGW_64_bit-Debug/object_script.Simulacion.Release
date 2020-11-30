@@ -1,6 +1,6 @@
 release/almacen.o
 release/almacenfinal.o
-release/banda.o
+release/bandame.o
 release/bandeja.o
 release/carrito.o
 release/cola.o
