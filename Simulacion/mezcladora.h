@@ -26,7 +26,6 @@ public:
         running = true;
     }
 
-
     void run();
 
 };

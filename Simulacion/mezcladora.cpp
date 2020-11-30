@@ -3,6 +3,6 @@
 
 void Mezcladora::run(){
     while(running){
-        if(cant)
+        //if(cant)
     }
 }

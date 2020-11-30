@@ -5,7 +5,6 @@
 #include <QtDebug>
 #include "listadoblecircular.h"
 #include "planificador.h"
-#include "banda.h"
 #include "listasimpletransporte.h"
 
 
@@ -14,7 +13,7 @@
 class Empacadora : public QThread{
 public:
     Planificador * planificador;
-    Banda * banda;
+    //Banda * banda;
     ListaSimpleTransporte * listaTransporte;
     NodoPaquete * nodoPaquete;
     int index;
@@ -23,7 +22,7 @@ public:
     bool running;
 
     Empacadora(){
-        banda = new Banda();
+        //banda = new Banda();
         planificador = new Planificador();
         listaTransporte = new ListaSimpleTransporte();
         nodoPaquete = planificador->lista->primerNodo;
@@ -41,7 +40,7 @@ public:
     }
 
     void recoger(){
-        galletas += banda->desencolar();
+        //galletas += banda->desencolar();
     }
 
     void ubicarPaquete(){

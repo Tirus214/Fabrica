@@ -111,6 +111,7 @@ struct Fabrica {
     }
 
     void setElementos();
+    void correr();
 
 };
 

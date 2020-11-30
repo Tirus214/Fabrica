@@ -29,6 +29,8 @@ public:
     }
 
     void setAlmacen(Almacen * _almacen);
+
+
     void run();
 };
 #endif // CARRITO_H

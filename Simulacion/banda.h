@@ -5,8 +5,6 @@
 #include <QtDebug>
 #include "cola.h"
 #include "mezcladora.h"
-#include "horno.h"
-#include "empacadora.h"
 
 
 
@@ -18,8 +16,6 @@ public:
     double velocidad;
     Mezcladora * mezcladora1;
     Mezcladora * mezcladora2;
-    Horno * horno;
-    Empacadora * empacadora;
 
     Banda(){
         cola = new Cola();
@@ -28,8 +24,6 @@ public:
         velocidad = 10;
         mezcladora1 = new Mezcladora();
         mezcladora2 = new Mezcladora();
-        horno = new Horno();
-        empacadora = new Empacadora();
      }
 
     bool isFull(){

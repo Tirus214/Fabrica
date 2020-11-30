@@ -5,7 +5,6 @@
 #include <QtDebug>
 #include "listadoblecircular.h"
 #include "almacenfinal.h"
-#include "empacadora.h"
 
 
 
@@ -18,7 +17,6 @@ public:
     double velocidad;
     ListaDobleCircular * lista;
     AlmacenFinal * almacen;
-    Empacadora * empacadora;
 
     Transporte(){
         this->nombre = "";
@@ -27,7 +25,6 @@ public:
         velocidad = 0.0;
         lista = new ListaDobleCircular();
         almacen = new AlmacenFinal();
-        empacadora = new Empacadora();
     }
 
     Transporte(QString nombre){
@@ -37,7 +34,6 @@ public:
         velocidad = 0.0;
         lista = new ListaDobleCircular();
         almacen = new AlmacenFinal();
-        empacadora = new Empacadora();
     }
 
     void addPaquete(Paquete* paquete){

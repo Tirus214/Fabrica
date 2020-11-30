@@ -6,6 +6,7 @@ release/carrito.o
 release/cola.o
 release/dialogalmacen.o
 release/empacadora.o
+release/ensambladora.o
 release/fabrica.o
 release/horno.o
 release/listadoblecircular.o
