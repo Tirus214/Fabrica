@@ -13,6 +13,7 @@ public:
     int cantMax;
     int cantMin;
     bool chocolate;
+    bool harina;
     int peticion;
     double velocidad;
     bool running;
@@ -21,7 +22,6 @@ public:
     bool estado;
 
     Carrito(){
-        chocolate = true;
         cantMax = 0;
         cantMin = 0;
         velocidad = 0.0;
@@ -30,6 +30,8 @@ public:
         peticion = 0;
         resultado = 0;
         estado = true;
+        chocolate = false;
+        harina = false;
     }
 
     void setAlmacen(Almacen * _almacen);
@@ -56,12 +58,14 @@ public:
     void run(){
         while(running){
             sleep(velocidad/2*1000);
-            if(estado){
+            if(estado && resultado == 0){
                 if(chocolate) traerChocolate();
-                else traerHarina();
+                else if(harina) traerHarina();
                 sleep(velocidad/2*1000);
             }
             putResultado();
+            chocolate = false;
+            harina = false;
         }
     }
 };

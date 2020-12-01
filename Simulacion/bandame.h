@@ -14,6 +14,10 @@ public:
     double velocidad;
     Mezcladora * mezcladora1;
     Mezcladora * mezcladora2;
+    bool running;
+    bool estado;
+    bool nombreChocolate;
+    bool nombreHarina;
 
     BandaME(){
         cola = new Cola();
@@ -22,6 +26,10 @@ public:
         velocidad = 10;
         mezcladora1 = new Mezcladora();
         mezcladora2 = new Mezcladora();
+        running = true;
+        estado = true;
+        nombreChocolate = false;
+        nombreHarina = false;
      }
 
     bool isFull(){
@@ -41,6 +49,27 @@ public:
             index--;
         }
         return 0;
+    }
+
+    void recoger(){
+        if(mezcladora1->mezclaHecha > 0){
+            mezcladora1->mezclaHecha -= 1;
+            encolar(1);
+        }
+        if(nombreHarina && mezcladora2->mezclaHecha > 0 && !isFull()){
+            mezcladora2->mezclaHecha -= 1;
+            encolar(1);
+        }
+    }
+
+    void run(){
+        while (running) {
+            sleep(velocidad/2*1000);
+            if (estado && !isFull()) {
+                recoger();
+            }
+            sleep(velocidad/2*1000);
+        }
     }
 };
 
