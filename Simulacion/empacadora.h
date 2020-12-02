@@ -20,28 +20,32 @@ public:
     double velocidad;
     int galletas;
     bool running;
-    BandaHE * BandaHornoEmpacadora;
+    BandaHE * banda;
+    bool estado;
 
     Empacadora(){
-        //banda = new Banda();
         planificador = new Planificador();
         listaTransporte = new ListaSimpleTransporte();
+        banda = new BandaHE;
         nodoPaquete = planificador->lista->primerNodo;
         index = 0;
         velocidad = 0.0;
         galletas = 0;
+        running = true;
+        estado = true;
     }
 
-    void crearTransporte(){
+    void crearTransporte(AlmacenFinal * almacen){
         NodoString * tmp = planificador->listaNombres->primerNodo;
         while(tmp != NULL){
             listaTransporte->insertarAlFinal(tmp->nombre);
+            listaTransporte->ultimoNodo->transporte->almacen = almacen;
             tmp = tmp->siguiente;
         }
     }
 
     void recoger(){
-        //galletas += banda->desencolar();
+        galletas += banda->desencolar();
     }
 
     void ubicarPaquete(){
@@ -73,12 +77,14 @@ public:
 
     void run(){
         while(running){
-            sleep(velocidad*1000);
-            recoger();
-            empacar();
+            sleep(velocidad/2*1000);
+            if(estado){
+                recoger();
+                empacar();
+            }
+            sleep(velocidad/2*1000);
         }
     }
-
 
 };
 

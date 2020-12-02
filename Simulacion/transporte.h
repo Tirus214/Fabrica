@@ -17,6 +17,10 @@ public:
     double velocidad;
     ListaDobleCircular * lista;
     AlmacenFinal * almacen;
+    bool running;
+    bool estado;
+    int index;
+    int cantidad;
 
     Transporte(){
         this->nombre = "";
@@ -25,6 +29,10 @@ public:
         velocidad = 0.0;
         lista = new ListaDobleCircular();
         almacen = new AlmacenFinal();
+        running = true;
+        estado = true;
+        index = 0;
+        cantidad = 0;
     }
 
     Transporte(QString nombre){
@@ -38,9 +46,26 @@ public:
 
     void addPaquete(Paquete* paquete){
         lista->insertarAlFinal(paquete);
+        cantidad++;
+        index++;
     }
 
-    void run();
+    NodoPaquete * ubicarPedido(){
+        NodoPaquete * tmp = lista->primerNodo;
+        for(int i=0; i<=index; i++){
+            tmp = tmp->siguiente;
+        }
+        return tmp;
+    }
+
+    void run(){
+        while(running){
+            if(estado && cantidad > 0){
+                almacen->addPaquete(ubicarPedido()->paquete);
+                cantidad--;
+            }
+        }
+    }
 };
 
 #endif // TRANSPORTE_H

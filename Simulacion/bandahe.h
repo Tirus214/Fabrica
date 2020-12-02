@@ -13,6 +13,8 @@ public:
     int index;
     double velocidad;
     Horno * horno;
+    bool running;
+    bool estado;
 
     // Constructores
 
@@ -22,6 +24,8 @@ public:
         index = 0;
         velocidad = 10;
         horno = new Horno();
+        running = true;
+        estado = true;
      }
 
     // Metodos
@@ -43,6 +47,23 @@ public:
             index--;
         }
         return 0;
+    }
+
+    void recoger(){
+        if(horno->galletas > 0){
+            horno->galletas -= 1;
+            encolar(1);
+        }
+    }
+
+    void run(){
+        while (running) {
+            sleep(velocidad/2*1000);
+            if (estado && !isFull()) {
+                recoger();
+            }
+            sleep(velocidad/2*1000);
+        }
     }
 
 };

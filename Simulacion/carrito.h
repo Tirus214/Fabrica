@@ -37,14 +37,14 @@ public:
     void setAlmacen(Almacen * _almacen);
 
     void traerChocolate(){
-        if(cantMax < peticion < cantMin){
+        if(cantMax < peticion && peticion < cantMin){
             almacen->chocolate -= peticion;
         }
         else peticion = 0;
     }
 
     void traerHarina(){
-        if(cantMax < peticion < cantMin){
+        if(cantMax < peticion && peticion < cantMin){
             almacen->harina -= peticion;
         }
         else peticion = 0;

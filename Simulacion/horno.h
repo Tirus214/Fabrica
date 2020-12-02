@@ -4,22 +4,66 @@
 #include <QtCore>
 #include <QtDebug>
 #include "bandeja.h"
-#include "bandame.h"
+#include "bandaeh.h"
 
 
 
 class Horno : public QThread{
 public:
     Bandeja * bandejas[6];
-    BandaME * banda1;
-    BandaME * banda2;
+    BandaEH * banda;
+    bool running;
+    bool estado;
+    int index;
+    int galletas;
 
     Horno(){
+        index = 0;
         for (int i=0; i<6; i++){
             bandejas[i] = new Bandeja();
         }
-        banda1 = new BandaME();
-        banda2 = new BandaME();
+        banda = new BandaEH();
+        running = true;
+        estado = true;
+        index = 0;
+        galletas = 0;
+    }
+
+    void arrancar(){
+        for (int i=0; i<6; i++) {
+            bandejas[i]->start();
+        }
+    }
+
+    void encenderBandeja(int num){
+        bandejas[num]->estado = true;
+    }
+
+    void apagarBandeja(int num){
+        bandejas[num]->estado = false;
+    }
+
+    void hornear(){
+        if(index == 6) index = 0;
+        bandejas[index]->cantidad += banda->desencolar();
+        index++;
+    }
+
+    void recoger(){
+        for (int i=0; i<6; i++) {
+            galletas += bandejas[i]->galletasHechas;
+            bandejas[i]->galletasHechas = 0;
+        }
+    }
+
+    void run(){
+        arrancar();
+        while(running){
+            if(estado){
+                hornear();
+                recoger();
+            }
+        }
     }
 };
 

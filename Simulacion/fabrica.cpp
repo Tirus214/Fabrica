@@ -8,13 +8,15 @@ void Fabrica::setElementos(){
     banda1->mezcladora1 = mezcladora1;
     banda1->mezcladora2 = mezcladora2;
     banda2->mezcladora1 = mezcladora3;
-    horno->banda1 = banda1;
-    horno->banda2 = banda2;
-    //banda3->horno = horno;
-    //supervisor1->banda = banda3;
-    //supervisor2->banda = banda3;
-    //banda3->empacadora = empacadora;
-
+    ensambladora->bandaChoc = banda2;
+    ensambladora->bandaMez = banda1;
+    banda3->ensambladora = ensambladora;
+    horno->banda = banda3;
+    banda4->horno = horno;
+    supervisor1->banda = banda4;
+    supervisor2->banda = banda4;
+    empacadora->banda = banda4;
+    empacadora->crearTransporte(almacenFinal);
 }
 
 void Fabrica::correr(){

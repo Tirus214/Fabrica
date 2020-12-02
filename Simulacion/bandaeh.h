@@ -63,6 +63,7 @@ public:
             if (estado) {
                 recoger();
             }
+            sleep(velocidad/2*1000);
         }
     }
 };
