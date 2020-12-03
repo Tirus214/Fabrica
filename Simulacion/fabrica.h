@@ -134,8 +134,12 @@ struct Fabrica {
     void setElementos();
     void correr();
     void detener();
-    void verificarFinal();
     void pausar();
+
+    void verificarFinal(){
+       if(almacenFinal->verificarFinal(planificador->index))
+           detener();
+    }
 };
 
 #endif // FABIRCA_H

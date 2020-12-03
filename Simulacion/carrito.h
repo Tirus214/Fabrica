@@ -20,13 +20,10 @@ public:
     Almacen * almacen;   // Referencia al Almacen de materia prima
     int resultado;       // ?
     bool estado;         // Condicional (Thread) (On/Off) (Pause)
-    QLabel * etiqueta;   // Area de texto donde se va a imprimir el estado del Carrito (MainWindow)
     bool imprimir;       // Condicional para empezar a imprimir o terminar (QLabel)
     // Constructor
 
     Carrito();
-
-    void __init__(QLabel *);
 
     // Metodos (prototipos)
 

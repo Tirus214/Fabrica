@@ -17,7 +17,6 @@ class MainWindow : public QMainWindow
 public:
 
     Fabrica fabrica;
-    //Carrito carrito;
 
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
