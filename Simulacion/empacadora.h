@@ -43,6 +43,22 @@ public:
             tmp = tmp->siguiente;
         }
     }
+    
+    void startTransportes(){
+        NodoTransporte * tmp = listaTransporte->primerNodo;
+        while(tmp != NULL){
+            tmp->siguiente->transporte->start();
+            tmp = tmp->siguiente;
+        }
+    }
+    
+    void stopTransportes(){
+        NodoTransporte * tmp = listaTransporte->primerNodo;
+        while(tmp != NULL){
+            tmp->siguiente->transporte->running = false;
+            tmp = tmp->siguiente;
+        }
+    }
 
     void recoger(){
         galletas += banda->desencolar();
@@ -77,12 +93,12 @@ public:
 
     void run(){
         while(running){
-            sleep(velocidad/2*1000);
+            sleep(velocidad/2);
             if(estado){
                 recoger();
                 empacar();
             }
-            sleep(velocidad/2*1000);
+            sleep(velocidad/2);
         }
     }
 

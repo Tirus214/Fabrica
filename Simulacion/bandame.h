@@ -30,7 +30,7 @@ public:
         estado = true;
         nombreChocolate = false;
         nombreHarina = false;
-     }
+    }
 
     bool isFull(){
         return index == cantMax;

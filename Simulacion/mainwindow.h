@@ -35,6 +35,10 @@ private slots:
 
     void on_btnBarraTransporte2_pressed();
 
+    void on_btnStart_clicked();
+
+    void on_btnPause_clicked();
+
 private:
     Ui::MainWindow *ui;
     DialogAlmacen *dialogoAlmacen;

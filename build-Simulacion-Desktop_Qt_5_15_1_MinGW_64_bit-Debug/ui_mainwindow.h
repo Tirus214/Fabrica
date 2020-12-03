@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -33,6 +34,8 @@ public:
     QPushButton *btnMezcladora3;
     QPushButton *btnBarraTransporte1;
     QPushButton *btnBarraTransporte2;
+    QPushButton *btnCarrito;
+    QLabel *lblEstado;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -78,6 +81,13 @@ public:
         btnBarraTransporte2 = new QPushButton(centralwidget);
         btnBarraTransporte2->setObjectName(QString::fromUtf8("btnBarraTransporte2"));
         btnBarraTransporte2->setGeometry(QRect(500, 200, 281, 51));
+        btnCarrito = new QPushButton(centralwidget);
+        btnCarrito->setObjectName(QString::fromUtf8("btnCarrito"));
+        btnCarrito->setGeometry(QRect(210, 140, 121, 81));
+        lblEstado = new QLabel(centralwidget);
+        lblEstado->setObjectName(QString::fromUtf8("lblEstado"));
+        lblEstado->setGeometry(QRect(360, 400, 541, 241));
+        lblEstado->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -104,6 +114,8 @@ public:
         btnMezcladora3->setText(QString());
         btnBarraTransporte1->setText(QString());
         btnBarraTransporte2->setText(QString());
+        btnCarrito->setText(QString());
+        lblEstado->setText(QString());
     } // retranslateUi
 
 };

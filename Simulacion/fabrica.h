@@ -130,7 +130,8 @@ struct Fabrica {
 
     void setElementos();
     void correr();
-
+    void detener();
+    void verificarFinal();
 };
 
 #endif // FABIRCA_H

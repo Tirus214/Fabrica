@@ -21,5 +21,52 @@ void Fabrica::setElementos(){
 
 void Fabrica::correr(){
     setElementos();
+    carrito->start();
+    mezcladora1->start();
+    mezcladora2->start();
+    mezcladora3->start();
+    banda1->start();
+    banda2->start();
+    ensambladora->start();
+    banda3->start();
+    horno->start();
+    banda4->start();
+    supervisor1->start();
+    supervisor2->start();
+    empacadora->start();
+    empacadora->startTransportes();
+}
 
+void Fabrica::pausar(){
+    carrito->estado = !carrito->estado;
+    mezcladora1->estado =!mezcladora1->estado;
+    mezcladora2->estado = !mezcladora2->estado;
+    mezcladora3->estado = !mezcladora3->estado;
+    banda1->estado = !banda1->estado;
+    banda2->estado = !banda2->estado;
+    ensambladora->estado = !ensambladora->estado;
+    banda3->estado = !banda3->estado;
+    horno->estado = !horno->estado;
+    banda4->estado = !banda4->estado;
+
+}
+void Fabrica::detener(){
+    carrito->running = false;
+    mezcladora1->running = false;
+    mezcladora2->running = false;
+    mezcladora3->running = false;
+    banda1->running = false;
+    banda2->running = false;
+    ensambladora->running = false;
+    banda3->running = false;
+    horno->running = false;
+    banda4->running = false;
+    supervisor1->running = false;
+    supervisor2->running = false;
+    empacadora->running = false;
+    empacadora->stopTransportes();
+}
+
+void Fabrica::verificarFinal(){
+   
 }

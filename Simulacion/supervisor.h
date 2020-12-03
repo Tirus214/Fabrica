@@ -17,6 +17,7 @@ public:
     int galletasMalas;
     int probabilidad;
     bool running;
+    int estado;
 
 
     Supervisor(){
@@ -26,6 +27,7 @@ public:
         galletasMalas = 0;
         probabilidad = 0;
         running = true;
+        estado = true;
     }
 
     void createProbabilidad(){
@@ -52,7 +54,7 @@ public:
     void run(){
         while(running){
             sleep(velocidad*1000);
-            if(!banda->cola->vacia()){
+            if( !banda->cola->vacia()){
                 inspeccionar();
                 devolver();
             }
