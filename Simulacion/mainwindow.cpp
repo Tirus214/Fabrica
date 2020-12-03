@@ -9,11 +9,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap pix(":/imagenes/ImagenesProyectoED/almacenMateria.png");
+    QPixmap pix("C:/Imagenes/almacenMateria.png");
     QIcon ButtonIcon(pix);
     ui->btnAlmacen->setIcon(ButtonIcon);
     ui->btnAlmacen->setIconSize(QSize(150,150));
-    QPixmap pixMezcladoraMasa(":/imagenes/ImagenesProyectoED/mezcladoraMasa.png");
+    QPixmap pixMezcladoraMasa("C:/Imagenes/mezcladoraMasa.png");
     QIcon ButtonIconMezcladora(pixMezcladoraMasa);
     ui->btnMezcladora1->setIcon(ButtonIconMezcladora);
     ui->btnMezcladora1->setIconSize(QSize(70,70));
@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnMezcladora2->setIconSize(QSize(70,70));
     ui->btnMezcladora3->setIcon(ButtonIconMezcladora);
     ui->btnMezcladora3->setIconSize(QSize(70,70));
-    QPixmap pixBandaTransporte(":/imagenes/ImagenesProyectoED/bandaTransportadora.png");
+    QPixmap pixBandaTransporte("C:/Imagenes/bandaTransportadora.png");
     QIcon ButtonIconBandaTransportadora(pixBandaTransporte);
     ui->btnBarraTransporte1->setIcon(ButtonIconBandaTransportadora);
     ui->btnBarraTransporte1->setIconSize(QSize(150,150));

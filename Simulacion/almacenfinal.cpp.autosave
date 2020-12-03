@@ -1,0 +1,12 @@
+#include "almacenfinal.h"
+
+void AlmacenFinal::addPaquete(Paquete * paquete){
+    listaHecha->insertarAlFinal(paquete);
+}
+
+void AlmacenFinal::verificarFinal(){
+    NodoPaquete * tmp = listaHecha->primerNodo;
+    do {
+        if(tmp->paquete->cantidadGalletas == tmp->paquete->galletasHechas)
+    }
+}
