@@ -31,7 +31,6 @@ public:
     void traerChocolate();
     void traerHarina();
     void putResultado();
-    void escribirEstado();
     void run();
 };
 

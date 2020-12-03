@@ -37,6 +37,16 @@ public:
     QPushButton *btnCarrito;
     QLabel *lblEstado;
     QPushButton *btnModificar;
+    QPushButton *btnEnsambladora;
+    QPushButton *btnBandaHE;
+    QPushButton *btnSupervisor1;
+    QPushButton *btnEmpacadora;
+    QPushButton *btnTransporte;
+    QPushButton *btnBandaEH;
+    QPushButton *btnHorno;
+    QPushButton *btnAlmacenFinal;
+    QPushButton *btnResumen;
+    QPushButton *btnSupervisor2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -44,7 +54,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1920, 1080);
+        MainWindow->resize(1913, 1080);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         btnStart = new QPushButton(centralwidget);
@@ -78,10 +88,10 @@ public:
         btnMezcladora3->setGeometry(QRect(360, 240, 111, 81));
         btnBarraTransporte1 = new QPushButton(centralwidget);
         btnBarraTransporte1->setObjectName(QString::fromUtf8("btnBarraTransporte1"));
-        btnBarraTransporte1->setGeometry(QRect(500, 90, 281, 51));
+        btnBarraTransporte1->setGeometry(QRect(480, 100, 261, 51));
         btnBarraTransporte2 = new QPushButton(centralwidget);
         btnBarraTransporte2->setObjectName(QString::fromUtf8("btnBarraTransporte2"));
-        btnBarraTransporte2->setGeometry(QRect(500, 200, 281, 51));
+        btnBarraTransporte2->setGeometry(QRect(480, 190, 261, 51));
         btnCarrito = new QPushButton(centralwidget);
         btnCarrito->setObjectName(QString::fromUtf8("btnCarrito"));
         btnCarrito->setGeometry(QRect(210, 140, 121, 81));
@@ -92,10 +102,40 @@ public:
         btnModificar = new QPushButton(centralwidget);
         btnModificar->setObjectName(QString::fromUtf8("btnModificar"));
         btnModificar->setGeometry(QRect(350, 550, 75, 23));
+        btnEnsambladora = new QPushButton(centralwidget);
+        btnEnsambladora->setObjectName(QString::fromUtf8("btnEnsambladora"));
+        btnEnsambladora->setGeometry(QRect(750, 100, 141, 141));
+        btnBandaHE = new QPushButton(centralwidget);
+        btnBandaHE->setObjectName(QString::fromUtf8("btnBandaHE"));
+        btnBandaHE->setGeometry(QRect(1250, 190, 251, 51));
+        btnSupervisor1 = new QPushButton(centralwidget);
+        btnSupervisor1->setObjectName(QString::fromUtf8("btnSupervisor1"));
+        btnSupervisor1->setGeometry(QRect(1250, 100, 121, 81));
+        btnEmpacadora = new QPushButton(centralwidget);
+        btnEmpacadora->setObjectName(QString::fromUtf8("btnEmpacadora"));
+        btnEmpacadora->setGeometry(QRect(1510, 100, 171, 211));
+        btnTransporte = new QPushButton(centralwidget);
+        btnTransporte->setObjectName(QString::fromUtf8("btnTransporte"));
+        btnTransporte->setGeometry(QRect(1510, 320, 131, 131));
+        btnBandaEH = new QPushButton(centralwidget);
+        btnBandaEH->setObjectName(QString::fromUtf8("btnBandaEH"));
+        btnBandaEH->setGeometry(QRect(900, 140, 171, 61));
+        btnHorno = new QPushButton(centralwidget);
+        btnHorno->setObjectName(QString::fromUtf8("btnHorno"));
+        btnHorno->setGeometry(QRect(1080, 100, 161, 141));
+        btnAlmacenFinal = new QPushButton(centralwidget);
+        btnAlmacenFinal->setObjectName(QString::fromUtf8("btnAlmacenFinal"));
+        btnAlmacenFinal->setGeometry(QRect(1290, 350, 191, 191));
+        btnResumen = new QPushButton(centralwidget);
+        btnResumen->setObjectName(QString::fromUtf8("btnResumen"));
+        btnResumen->setGeometry(QRect(1100, 350, 151, 191));
+        btnSupervisor2 = new QPushButton(centralwidget);
+        btnSupervisor2->setObjectName(QString::fromUtf8("btnSupervisor2"));
+        btnSupervisor2->setGeometry(QRect(1380, 100, 121, 81));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1920, 21));
+        menubar->setGeometry(QRect(0, 0, 1913, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -121,6 +161,16 @@ public:
         btnCarrito->setText(QString());
         lblEstado->setText(QString());
         btnModificar->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
+        btnEnsambladora->setText(QCoreApplication::translate("MainWindow", "Ensambladora", nullptr));
+        btnBandaHE->setText(QCoreApplication::translate("MainWindow", "bandaHE", nullptr));
+        btnSupervisor1->setText(QCoreApplication::translate("MainWindow", "Supervisor1", nullptr));
+        btnEmpacadora->setText(QCoreApplication::translate("MainWindow", "Empacadora", nullptr));
+        btnTransporte->setText(QCoreApplication::translate("MainWindow", "Transporte", nullptr));
+        btnBandaEH->setText(QCoreApplication::translate("MainWindow", "Banda EH", nullptr));
+        btnHorno->setText(QCoreApplication::translate("MainWindow", "Horno", nullptr));
+        btnAlmacenFinal->setText(QCoreApplication::translate("MainWindow", "Almacen Final", nullptr));
+        btnResumen->setText(QCoreApplication::translate("MainWindow", "Resumen de produccion", nullptr));
+        btnSupervisor2->setText(QCoreApplication::translate("MainWindow", "Supervisor2", nullptr));
     } // retranslateUi
 
 };

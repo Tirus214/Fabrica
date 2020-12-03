@@ -58,11 +58,10 @@ public:
 
     void run(){
         while (running) {
-            sleep(velocidad/2*1000);
-            if (estado && !isFull()) {
+            sleep(velocidad);
+            if (estado && !isFull()){
                 recoger();
             }
-            sleep(velocidad/2*1000);
         }
     }
 

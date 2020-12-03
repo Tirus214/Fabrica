@@ -22,8 +22,12 @@ debug/nodopaquete.o
 debug/nodostring.o
 debug/nodotransporte.o
 debug/paquete.o
+debug/parametros.o
 debug/planificador.o
 debug/receta.o
+debug/solicitar.o
 debug/supervisor.o
 debug/transporte.o
 debug/moc_mainwindow.o
+debug/moc_parametros.o
+debug/moc_solicitar.o

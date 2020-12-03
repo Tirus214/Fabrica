@@ -55,9 +55,8 @@ public:
 
     void run(){
         while(running){
-            estado = !isFull();
             if(estado){
-                sacarMateriales();
+                if(!isFull()) sacarMateriales();
                 hacerGalletas();
             }
         }
