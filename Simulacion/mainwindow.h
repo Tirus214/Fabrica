@@ -41,6 +41,28 @@ private slots:
 
     void on_btnDetener_clicked();
 
+    void on_btnCarrito_clicked();
+
+    void on_btnEnsambladora_clicked();
+
+    void on_btnBandaEH_clicked();
+
+    void on_btnHorno_clicked();
+
+    void on_btnBandaHE_clicked();
+
+    void on_btnSupervisores_clicked();
+
+    void on_btnSupervisor2_clicked();
+
+    void on_btnEmpacadora_clicked();
+
+    void on_btnTransporte_clicked();
+
+    void on_btnAlmacenFinal_clicked();
+
+    void on_btnSupervisor1_clicked();
+
 private:
     Ui::MainWindow *ui;
     DialogAlmacen *dialogoAlmacen;
