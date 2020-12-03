@@ -2,18 +2,23 @@
 #define ALMACEN_H
 
 
-struct Almacen{
+struct Almacen {
+
+    // Atributos
     int harina;
     int chocolate;
-    int susCod; //Codigo para cada sustraccion de materiales
 
-    Almacen(){
+    // Constructores
+    Almacen() {
         harina = 0;
         chocolate = 0;
-        susCod = 0;
     }
 
-    void sustraerMateriales();
+    // Metodos
+    void sustraerMateriales(int cantHarina, int cantChocolate) {
+        harina = harina - cantHarina;
+        chocolate = chocolate - cantChocolate;
+    }
 
 };
 

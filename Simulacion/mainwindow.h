@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 #include <QMainWindow>
 #include "dialogalmacen.h"
-
+#include "fabrica.h"
 
 
 
@@ -15,6 +15,10 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+
+    Fabrica fabrica;
+    //Carrito carrito;
+
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 

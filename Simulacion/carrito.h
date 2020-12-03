@@ -4,69 +4,38 @@
 #include <QApplication>
 #include <QtCore>
 #include <QtDebug>
+#include <QLabel>
 
-
-
-class Carrito : public QThread{
+class Carrito : public QThread {
 public:
-    QString ingrediente;
-    int cantMax;
-    int cantMin;
-    bool chocolate;
-    bool harina;
-    int peticion;
-    double velocidad;
-    bool running;
-    Almacen * almacen;
-    int resultado;
-    bool estado;
+    // Atributos
+    QString ingrediente; // Tipo de ingrediente (Chocolate / Harina)
+    int cantMax;         // Maximo que puede transportar
+    int cantMin;         // Minimo que puede transportar
+    bool chocolate;      // Condicional (chocolate/harina)
+    bool harina;         // Condicional (chocolate/harina)
+    int peticion;        // Cant. de ingrediente que necesita la mezcladora
+    double velocidad;    // Velocidad a la que opera el carrito (de almacen a mezcladora)
+    bool running;        // Condicional (Thread)
+    Almacen * almacen;   // Referencia al Almacen de materia prima
+    int resultado;       // ?
+    bool estado;         // Condicional (Thread) (On/Off) (Pause)
+    QLabel * etiqueta;   // Area de texto donde se va a imprimir el estado del Carrito (MainWindow)
+    bool imprimir;       // Condicional para empezar a imprimir o terminar (QLabel)
+    // Constructor
 
-    Carrito(){
-        cantMax = 0;
-        cantMin = 0;
-        velocidad = 0.0;
-        almacen = new Almacen();
-        running = true;
-        peticion = 0;
-        resultado = 0;
-        estado = true;
-        chocolate = false;
-        harina = false;
-    }
+    Carrito();
 
-    void setAlmacen(Almacen * _almacen);
+    void __init__(QLabel *);
 
-    void traerChocolate(){
-        if(cantMax < peticion && peticion < cantMin){
-            almacen->chocolate -= peticion;
-        }
-        else peticion = 0;
-    }
+    // Metodos (prototipos)
 
-    void traerHarina(){
-        if(cantMax < peticion && peticion < cantMin){
-            almacen->harina -= peticion;
-        }
-        else peticion = 0;
-    }
-
-    void putResultado(){
-        resultado = peticion;
-    }
-
-
-    void run(){
-        while(running){
-            sleep(velocidad/2*1000);
-            if(estado && resultado == 0){
-                if(chocolate) traerChocolate();
-                else if(harina) traerHarina();
-                sleep(velocidad/2*1000);
-            }
-            putResultado();
-            chocolate = false;
-            harina = false;
-        }
-    }
+    void setAlmacen(Almacen *);
+    void traerChocolate();
+    void traerHarina();
+    void putResultado();
+    void escribirEstado();
+    void run();
 };
+
 #endif // CARRITO_H
