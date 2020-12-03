@@ -60,6 +60,22 @@ public:
         }
     }
 
+    void startTransportes(){
+        NodoTransporte * tmp = listaTransporte->primerNodo;
+        while(tmp != NULL){
+            tmp->siguiente->transporte->start();
+            tmp = tmp->siguiente;
+        }
+    }
+
+    void stopTransportes(){
+        NodoTransporte * tmp = listaTransporte->primerNodo;
+        while(tmp != NULL){
+            tmp->siguiente->transporte->running = false;
+            tmp = tmp->siguiente;
+        }
+    }
+
     void recoger(){
         galletas += banda->desencolar();
     }

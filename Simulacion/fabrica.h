@@ -31,6 +31,7 @@ struct Fabrica {
     Supervisor * supervisor2;
     Empacadora * empacadora;
     AlmacenFinal * almacenFinal;
+    QMutex * mutex;
 
     Fabrica(){
         planificador = new Planificador();
@@ -49,6 +50,7 @@ struct Fabrica {
         supervisor2 = new Supervisor();
         empacadora = new Empacadora();
         almacenFinal = new AlmacenFinal();
+        mutex = new QMutex();
     }
 
     void setPlanificador(int cantGalletas, QString nombre, int cantPaquetes){
@@ -132,7 +134,10 @@ struct Fabrica {
     void correr();
     void detener();
     void verificarFinal();
+<<<<<<< Updated upstream
     void pausar();
+=======
+>>>>>>> Stashed changes
 };
 
 #endif // FABIRCA_H

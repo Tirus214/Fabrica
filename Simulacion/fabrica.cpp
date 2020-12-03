@@ -37,6 +37,7 @@ void Fabrica::correr(){
     empacadora->startTransportes();
 }
 
+<<<<<<< Updated upstream
 void Fabrica::pausar(){
     carrito->estado = !carrito->estado;
     mezcladora1->estado =!mezcladora1->estado;
@@ -50,6 +51,8 @@ void Fabrica::pausar(){
     banda4->estado = !banda4->estado;
 
 }
+=======
+>>>>>>> Stashed changes
 void Fabrica::detener(){
     carrito->running = false;
     mezcladora1->running = false;
@@ -68,5 +71,9 @@ void Fabrica::detener(){
 }
 
 void Fabrica::verificarFinal(){
+<<<<<<< Updated upstream
    
+=======
+   if(almacenFinal->verificarFinal(planificador->index)) detener();
+>>>>>>> Stashed changes
 }

@@ -33,6 +33,7 @@ SOURCES += \
     nodostring.cpp \
     nodotransporte.cpp \
     paquete.cpp \
+    parametros.cpp \
     planificador.cpp \
     receta.cpp \
     supervisor.cpp \
@@ -61,13 +62,15 @@ HEADERS += \
     nodostring.h \
     nodotransporte.h \
     paquete.h \
+    parametros.h \
     planificador.h \
     receta.h \
     supervisor.h \
     transporte.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    parametros.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
