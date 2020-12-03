@@ -19,6 +19,7 @@ public:
     Carrito * carro;
     bool running;
     bool estado;
+    QMutex * mutex;
 
     Mezcladora(){
         cantMax = 0;
@@ -30,16 +31,23 @@ public:
         estado = true;
         nombreChocolate = false;
         nombreHarina = false;
+        mutex = new QMutex();
     }
 
     void pedirMateriales(){
-        if(nombreChocolate) carro->chocolate = true;
-        else if(nombreHarina) carro->harina = true;
-        carro->peticion = cantMax;
-        mezcla = carro->resultado;
-        if(mezcla == 0){
-            carro->peticion = cantMin;
+        try{
+            mutex->lock();
+            if(nombreChocolate) carro->chocolate = true;
+            else if(nombreHarina) carro->harina = true;
+            carro->peticion = cantMax;
             mezcla = carro->resultado;
+            if(mezcla == 0){
+                carro->peticion = cantMin;
+                mezcla = carro->resultado;
+            }
+            mutex->unlock();
+        } catch (QException) {
+
         }
     }
 
@@ -50,12 +58,12 @@ public:
 
     void run(){
         while(running){
-            sleep(velocidad/2*1000);
+            sleep(velocidad/2);
             if(estado && mezclaHecha == 0){
                 if(mezcla == 0) pedirMateriales();
                 else hacerMezcla();
             }
-            sleep(velocidad/2*1000);
+            sleep(velocidad/2);
         }
     }
 

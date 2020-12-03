@@ -12,6 +12,8 @@ struct AlmacenFinal{
     }
 
     void addPaquete(Paquete* paquete);
+
+    bool verificarFinal(int num);
 };
 
 #endif // ALMACENFINAL_H

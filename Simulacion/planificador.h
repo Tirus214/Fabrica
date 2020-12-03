@@ -11,6 +11,7 @@ struct Planificador{
     ListaSimpleString * listaNombres;
     ListaDobleCircular * lista;
     int totalGalletas;
+    int index;
 
     Planificador(){
         listaNombres = new ListaSimpleString();
