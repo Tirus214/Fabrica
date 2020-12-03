@@ -27,7 +27,7 @@ public:
     QWidget *centralwidget;
     QPushButton *btnStart;
     QPushButton *btnPause;
-    QPushButton *btnReset;
+    QPushButton *btnDetener;
     QPushButton *btnAlmacen;
     QPushButton *btnMezcladora1;
     QPushButton *btnMezcladora2;
@@ -36,6 +36,7 @@ public:
     QPushButton *btnBarraTransporte2;
     QPushButton *btnCarrito;
     QLabel *lblEstado;
+    QPushButton *btnModificar;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -52,9 +53,9 @@ public:
         btnPause = new QPushButton(centralwidget);
         btnPause->setObjectName(QString::fromUtf8("btnPause"));
         btnPause->setGeometry(QRect(150, 550, 80, 25));
-        btnReset = new QPushButton(centralwidget);
-        btnReset->setObjectName(QString::fromUtf8("btnReset"));
-        btnReset->setGeometry(QRect(250, 550, 80, 25));
+        btnDetener = new QPushButton(centralwidget);
+        btnDetener->setObjectName(QString::fromUtf8("btnDetener"));
+        btnDetener->setGeometry(QRect(250, 550, 80, 25));
         btnAlmacen = new QPushButton(centralwidget);
         btnAlmacen->setObjectName(QString::fromUtf8("btnAlmacen"));
         btnAlmacen->setGeometry(QRect(30, 220, 171, 151));
@@ -86,8 +87,11 @@ public:
         btnCarrito->setGeometry(QRect(210, 140, 121, 81));
         lblEstado = new QLabel(centralwidget);
         lblEstado->setObjectName(QString::fromUtf8("lblEstado"));
-        lblEstado->setGeometry(QRect(360, 400, 541, 241));
+        lblEstado->setGeometry(QRect(440, 400, 541, 241));
         lblEstado->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        btnModificar = new QPushButton(centralwidget);
+        btnModificar->setObjectName(QString::fromUtf8("btnModificar"));
+        btnModificar->setGeometry(QRect(350, 550, 75, 23));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -107,7 +111,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         btnStart->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
         btnPause->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
-        btnReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        btnDetener->setText(QCoreApplication::translate("MainWindow", "Detener", nullptr));
         btnAlmacen->setText(QString());
         btnMezcladora1->setText(QString());
         btnMezcladora2->setText(QString());
@@ -116,6 +120,7 @@ public:
         btnBarraTransporte2->setText(QString());
         btnCarrito->setText(QString());
         lblEstado->setText(QString());
+        btnModificar->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
     } // retranslateUi
 
 };

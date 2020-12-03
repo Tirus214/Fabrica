@@ -22,8 +22,10 @@ release/nodopaquete.o
 release/nodostring.o
 release/nodotransporte.o
 release/paquete.o
+release/parametros.o
 release/planificador.o
 release/receta.o
 release/supervisor.o
 release/transporte.o
 release/moc_mainwindow.o
+release/moc_parametros.o

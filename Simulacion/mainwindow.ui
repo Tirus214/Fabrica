@@ -40,7 +40,7 @@
      <string>Pause</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnReset">
+   <widget class="QPushButton" name="btnDetener">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -50,7 +50,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Reset</string>
+     <string>Detener</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnAlmacen">

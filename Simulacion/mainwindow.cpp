@@ -98,5 +98,11 @@ void MainWindow::on_btnStart_clicked()
 
 void MainWindow::on_btnPause_clicked()
 {
+    fabrica.pausar();
+}
 
+
+void MainWindow::on_btnDetener_clicked()
+{
+    fabrica.detener();
 }

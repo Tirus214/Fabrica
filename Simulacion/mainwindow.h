@@ -39,6 +39,8 @@ private slots:
 
     void on_btnPause_clicked();
 
+    void on_btnDetener_clicked();
+
 private:
     Ui::MainWindow *ui;
     DialogAlmacen *dialogoAlmacen;
