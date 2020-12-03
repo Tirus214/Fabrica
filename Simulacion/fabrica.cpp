@@ -5,6 +5,9 @@ void Fabrica::setElementos(){
     mezcladora1->carro = carrito;
     mezcladora2->carro = carrito;
     mezcladora3->carro = carrito;
+    mezcladora1->mutex = mutex;
+    mezcladora2->mutex = mutex;
+    mezcladora3->mutex = mutex;
     banda1->mezcladora1 = mezcladora1;
     banda1->mezcladora2 = mezcladora2;
     banda2->mezcladora1 = mezcladora3;
@@ -71,5 +74,5 @@ void Fabrica::detener(){
 }
 
 void Fabrica::verificarFinal(){
-   
+   if(almacenFinal->verificarFinal(planificador->index)) detener();
 }

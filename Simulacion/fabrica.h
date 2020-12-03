@@ -134,10 +134,7 @@ struct Fabrica {
     void correr();
     void detener();
     void verificarFinal();
-<<<<<<< Updated upstream
     void pausar();
-=======
->>>>>>> Stashed changes
 };
 
 #endif // FABIRCA_H
