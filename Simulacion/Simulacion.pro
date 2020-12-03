@@ -18,7 +18,6 @@ SOURCES += \
     bandeja.cpp \
     carrito.cpp \
     cola.cpp \
-    dialogalmacen.cpp \
     empacadora.cpp \
     ensambladora.cpp \
     fabrica.cpp \
@@ -48,7 +47,6 @@ HEADERS += \
     bandeja.h \
     carrito.h \
     cola.h \
-    dialogalmacen.h \
     empacadora.h \
     ensambladora.h \
     fabrica.h \
@@ -69,7 +67,6 @@ HEADERS += \
     transporte.h
 
 FORMS += \
-    dialogalmacen.ui \
     mainwindow.ui
 
 # Default rules for deployment.

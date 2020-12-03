@@ -7,7 +7,6 @@ debug/bandame.o
 debug/bandeja.o
 debug/carrito.o
 debug/cola.o
-debug/dialogalmacen.o
 debug/empacadora.o
 debug/ensambladora.o
 debug/fabrica.o
@@ -27,5 +26,4 @@ debug/planificador.o
 debug/receta.o
 debug/supervisor.o
 debug/transporte.o
-debug/moc_dialogalmacen.o
 debug/moc_mainwindow.o

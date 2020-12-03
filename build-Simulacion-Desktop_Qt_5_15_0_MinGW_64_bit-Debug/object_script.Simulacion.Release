@@ -7,7 +7,6 @@ release/bandame.o
 release/bandeja.o
 release/carrito.o
 release/cola.o
-release/dialogalmacen.o
 release/empacadora.o
 release/ensambladora.o
 release/fabrica.o
@@ -27,5 +26,4 @@ release/planificador.o
 release/receta.o
 release/supervisor.o
 release/transporte.o
-release/moc_dialogalmacen.o
 release/moc_mainwindow.o

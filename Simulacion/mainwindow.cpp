@@ -42,8 +42,7 @@ void MainWindow::on_btnAlmacen_clicked()
 //    dialogoAlmacen.exec();
     // Abrir el dialogo pero sin inteponerse a la ventanan principal
     //hide(); // Esconde la ventana principal
-    dialogoAlmacen = new DialogAlmacen(this);
-    dialogoAlmacen->show();
+
 }
 
 void MainWindow::on_btnMezcladora1_pressed()
