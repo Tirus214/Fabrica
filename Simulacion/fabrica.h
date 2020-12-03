@@ -132,6 +132,7 @@ struct Fabrica {
     void correr();
     void detener();
     void verificarFinal();
+    void pausar();
 };
 
 #endif // FABIRCA_H
