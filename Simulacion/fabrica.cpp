@@ -48,8 +48,11 @@ void Fabrica::pausar(){
     banda3->estado = !banda3->estado;
     horno->estado = !horno->estado;
     banda4->estado = !banda4->estado;
-
+    supervisor1->estado = !supervisor1->estado;
+    supervisor2->estado = !supervisor2->estado;
+    empacadora->estado = !empacadora->estado;
 }
+
 void Fabrica::detener(){
     carrito->running = false;
     mezcladora1->running = false;
