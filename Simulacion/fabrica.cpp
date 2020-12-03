@@ -73,6 +73,4 @@ void Fabrica::detener(){
     empacadora->stopTransportes();
 }
 
-void Fabrica::verificarFinal(){
-   if(almacenFinal->verificarFinal(planificador->index)) detener();
-}
+

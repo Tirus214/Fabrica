@@ -36,6 +36,7 @@ SOURCES += \
     parametros.cpp \
     planificador.cpp \
     receta.cpp \
+    solicitar.cpp \
     supervisor.cpp \
     transporte.cpp
 
@@ -65,12 +66,14 @@ HEADERS += \
     parametros.h \
     planificador.h \
     receta.h \
+    solicitar.h \
     supervisor.h \
     transporte.h
 
 FORMS += \
     mainwindow.ui \
-    parametros.ui
+    parametros.ui \
+    solicitar.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

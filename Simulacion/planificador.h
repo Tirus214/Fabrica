@@ -18,6 +18,7 @@ struct Planificador{
         lista = new ListaDobleCircular();
         totalGalletas = 0;
         receta = new Receta();
+        index = 0;
     }
 
     void setReceta(int harina, int chocolate){

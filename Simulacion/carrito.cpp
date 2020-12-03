@@ -1,8 +1,6 @@
 #include "carrito.h"
 
-Carrito::Carrito() {}
-
-void Carrito::__init__(QLabel * _etiqueta) {
+Carrito::Carrito() {
     cantMax = 100;
     cantMin = 10;
     velocidad = 10.0;
@@ -13,7 +11,6 @@ void Carrito::__init__(QLabel * _etiqueta) {
     estado = true;
     chocolate = true;
     harina = false;
-    etiqueta = _etiqueta;
     imprimir = false;
 }
 
@@ -39,16 +36,6 @@ void Carrito::putResultado(){
     resultado = peticion;
 }
 
-void Carrito::escribirEstado(){
-    QString estadoStr = "indef";
-    if (estado == true) {
-        estadoStr = "On";
-    } else if (estado == false) {
-        estadoStr = "Off";
-    }
-    QString texto = QStringLiteral("Estado: %1\nPeticion: %2\nResultado: %3").arg(estadoStr).arg(peticion).arg(resultado);
-    etiqueta->setText(texto);
-}
 
 void Carrito::run(){
     while(running){
