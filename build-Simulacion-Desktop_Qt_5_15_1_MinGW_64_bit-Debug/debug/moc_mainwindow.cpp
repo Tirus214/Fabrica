@@ -155,12 +155,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 11: _t->on_btnBandaEH_clicked(); break;
         case 12: _t->on_btnHorno_clicked(); break;
         case 13: _t->on_btnBandaHE_clicked(); break;
-        case 14: _t->on_btnSupervisor1_clicked(); break;
-        case 15: _t->on_btnSupervisor2_clicked(); break;
-        case 16: _t->on_btnEmpacadora_clicked(); break;
-        case 17: _t->on_btnTransporte_clicked(); break;
-        case 18: _t->on_btnAlmacenFinal_clicked(); break;
-        case 19: _t->on_btnSupervisor1_clicked(); break;
+        case 14: _t->on_btnSupervisor2_clicked(); break;
+        case 15: _t->on_btnEmpacadora_clicked(); break;
+        case 16: _t->on_btnTransporte_clicked(); break;
+        case 17: _t->on_btnAlmacenFinal_clicked(); break;
+        case 18: _t->on_btnSupervisor1_clicked(); break;
         default: ;
         }
     }

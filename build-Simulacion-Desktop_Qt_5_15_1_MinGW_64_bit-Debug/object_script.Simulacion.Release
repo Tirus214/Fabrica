@@ -25,7 +25,9 @@ release/paquete.o
 release/parametros.o
 release/planificador.o
 release/receta.o
+release/solicitar.o
 release/supervisor.o
 release/transporte.o
 release/moc_mainwindow.o
 release/moc_parametros.o
+release/moc_solicitar.o
