@@ -3,6 +3,7 @@
 #include <QPixmap>
 #include "dialogalmacen.h"
 #include <QMessageBox>
+#include "parametros.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -44,6 +45,10 @@ void MainWindow::on_btnPause_clicked()
 void MainWindow::on_btnDetener_clicked()
 {
     fabrica.detener();
+}
+
+void MainWindow::on_btnModificar_clicked(){
+    
 }
 
 void MainWindow::on_btnAlmacen_clicked()

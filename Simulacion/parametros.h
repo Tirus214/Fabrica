@@ -1,6 +1,6 @@
 #ifndef PARAMETROS_H
 #define PARAMETROS_H
-
+#include "planificador.h"
 #include <QDialog>
 
 namespace Ui {

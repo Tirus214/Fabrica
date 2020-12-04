@@ -39,6 +39,8 @@ private slots:
     void on_btnPause_clicked();
 
     void on_btnDetener_clicked();
+    
+    void on_btnModificar_clicked();
 
     void on_btnCarrito_clicked();
 
