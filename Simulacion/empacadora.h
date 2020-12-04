@@ -64,6 +64,14 @@ public:
         }
     }
 
+    NodoTransporte * transporteActivo(){
+        NodoTransporte * tmp = listaTransporte->primerNodo;
+        while(!tmp->transporte->estado && tmp->transporte->cantMax != tmp->transporte->cantidad && tmp != NULL){
+            tmp = tmp->siguiente;
+        }
+        if(tmp == NULL) return listaTransporte->primerNodo;
+        return tmp;
+    }
 
     void recoger(){
         galletas += banda->desencolar();

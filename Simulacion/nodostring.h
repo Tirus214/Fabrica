@@ -7,11 +7,13 @@
 struct NodoString{
 
     QString nombre;
+    int dato;
     NodoString* siguiente;	//next
 
     //constructores
     NodoString(){
         nombre = "";
+        dato = 0;
         siguiente = NULL;
     }
 
