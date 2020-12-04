@@ -31,6 +31,11 @@ public:
     void traerChocolate();
     void traerHarina();
     void putResultado();
+    // ==== setters ====
+    void setVelocidad(double);
+    void setMaximo(int);
+    void setMinimo(int);
+    // =================
     void run();
 };
 
