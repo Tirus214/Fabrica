@@ -51,10 +51,6 @@ public:
         }
     }
 
-    // ==== setters ====
-    void setVelocidad(double);
-    // =================
-
     void run(){
         while(running){
             sleep(velocidad*1000);

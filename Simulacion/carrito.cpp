@@ -37,21 +37,6 @@ void Carrito::putResultado(){
     peticion = 0;
 }
 
-// ======== SETTERS ===========
-
-void Carrito::setVelocidad(double _velocidad) {
-    this->velocidad = _velocidad;
-}
-
-void Carrito::setMaximo(int _maximo) {
-    this->cantMax = _maximo;
-}
-
-void Carrito::setMinimo(int _minimo) {
-    this->cantMin = _minimo;
-}
-
-// ============================
 
 void Carrito::run(){
     while(running){

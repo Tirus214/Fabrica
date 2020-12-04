@@ -56,11 +56,6 @@ public:
         }
     }
 
-    // ==== setters ====
-    void setVelocidad(double);
-    void setMaximo(int);
-    // =================
-
     void run(){
         while (running) {
             sleep(velocidad);

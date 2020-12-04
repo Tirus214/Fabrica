@@ -22,8 +22,6 @@ public:
     bool running;
     BandaHE * banda;
     bool estado;
-    // Agrego como atributo un int cantMax para el 'parametros.h'
-    int cantMax;
 
     Empacadora(){
         planificador = new Planificador();
@@ -35,8 +33,6 @@ public:
         galletas = 0;
         running = true;
         estado = true;
-        // nuevo
-        cantMax = 0;
     }
 
     void crearTransporte(AlmacenFinal * almacen){
@@ -103,11 +99,6 @@ public:
             montarTransporte();
         }
     }
-
-    // ==== setters ====
-    void setVelocidad(double);
-    void setMaximo(int);
-    // =================
 
     void run(){
         while(running){
