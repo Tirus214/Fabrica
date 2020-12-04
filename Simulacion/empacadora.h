@@ -24,6 +24,8 @@ public:
     bool estado;
     // Agrego como atributo un int cantMax para el 'parametros.h'
     int cantMax;
+    double velocitadTransporte;
+    int maximoTrasnporte;
 
     Empacadora(){
         planificador = new Planificador();
@@ -37,6 +39,8 @@ public:
         estado = true;
         // nuevo
         cantMax = 0;
+        velocitadTransporte = 0.0;
+        maximoTrasnporte = 0;
     }
 
     void crearTransporte(AlmacenFinal * almacen){
@@ -44,6 +48,8 @@ public:
         while(tmp != NULL){
             listaTransporte->insertarAlFinal(tmp->nombre);
             listaTransporte->ultimoNodo->transporte->almacen = almacen;
+            listaTransporte->ultimoNodo->transporte->velocidad = velocitadTransporte;
+            listaTransporte->ultimoNodo->transporte->cantMax = maximoTrasnporte;
             tmp = tmp->siguiente;
         }
     }
