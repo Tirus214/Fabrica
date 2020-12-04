@@ -161,16 +161,16 @@ public:
         btnCarrito->setText(QString());
         lblEstado->setText(QString());
         btnModificar->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
-        btnEnsambladora->setText(QString());
-        btnBandaHE->setText(QString());
-        btnSupervisor1->setText(QString());
-        btnEmpacadora->setText(QString());
-        btnTransporte->setText(QString());
-        btnBandaEH->setText(QString());
-        btnHorno->setText(QString());
-        btnAlmacenFinal->setText(QString());
-        btnResumen->setText(QString());
-        btnSupervisor2->setText(QString());
+        btnEnsambladora->setText(QCoreApplication::translate("MainWindow", "Ensambladora", nullptr));
+        btnBandaHE->setText(QCoreApplication::translate("MainWindow", "bandaHE", nullptr));
+        btnSupervisor1->setText(QCoreApplication::translate("MainWindow", "Supervisor1", nullptr));
+        btnEmpacadora->setText(QCoreApplication::translate("MainWindow", "Empacadora", nullptr));
+        btnTransporte->setText(QCoreApplication::translate("MainWindow", "Transporte", nullptr));
+        btnBandaEH->setText(QCoreApplication::translate("MainWindow", "Banda EH", nullptr));
+        btnHorno->setText(QCoreApplication::translate("MainWindow", "Horno", nullptr));
+        btnAlmacenFinal->setText(QCoreApplication::translate("MainWindow", "Almacen Final", nullptr));
+        btnResumen->setText(QCoreApplication::translate("MainWindow", "Resumen de produccion", nullptr));
+        btnSupervisor2->setText(QCoreApplication::translate("MainWindow", "Supervisor2", nullptr));
     } // retranslateUi
 
 };

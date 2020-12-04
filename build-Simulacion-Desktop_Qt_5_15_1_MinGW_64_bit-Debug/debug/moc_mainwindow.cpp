@@ -22,8 +22,13 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
+<<<<<<< HEAD
     QByteArrayData data[23];
     char stringdata0[529];
+=======
+    QByteArrayData data[22];
+    char stringdata0[505];
+>>>>>>> parent of a0063cf... check
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,6 +48,7 @@ QT_MOC_LITERAL(7, 143, 30), // "on_btnBarraTransporte2_pressed"
 QT_MOC_LITERAL(8, 174, 19), // "on_btnStart_clicked"
 QT_MOC_LITERAL(9, 194, 19), // "on_btnPause_clicked"
 QT_MOC_LITERAL(10, 214, 21), // "on_btnDetener_clicked"
+<<<<<<< HEAD
 QT_MOC_LITERAL(11, 236, 23), // "on_btnModificar_clicked"
 QT_MOC_LITERAL(12, 260, 21), // "on_btnCarrito_clicked"
 QT_MOC_LITERAL(13, 282, 26), // "on_btnEnsambladora_clicked"
@@ -55,6 +61,19 @@ QT_MOC_LITERAL(19, 426, 24), // "on_btnEmpacadora_clicked"
 QT_MOC_LITERAL(20, 451, 24), // "on_btnTransporte_clicked"
 QT_MOC_LITERAL(21, 476, 26), // "on_btnAlmacenFinal_clicked"
 QT_MOC_LITERAL(22, 503, 25) // "on_btnSupervisor1_clicked"
+=======
+QT_MOC_LITERAL(11, 236, 21), // "on_btnCarrito_clicked"
+QT_MOC_LITERAL(12, 258, 26), // "on_btnEnsambladora_clicked"
+QT_MOC_LITERAL(13, 285, 21), // "on_btnBandaEH_clicked"
+QT_MOC_LITERAL(14, 307, 19), // "on_btnHorno_clicked"
+QT_MOC_LITERAL(15, 327, 21), // "on_btnBandaHE_clicked"
+QT_MOC_LITERAL(16, 349, 26), // "on_btnSupervisores_clicked"
+QT_MOC_LITERAL(17, 376, 25), // "on_btnSupervisor2_clicked"
+QT_MOC_LITERAL(18, 402, 24), // "on_btnEmpacadora_clicked"
+QT_MOC_LITERAL(19, 427, 24), // "on_btnTransporte_clicked"
+QT_MOC_LITERAL(20, 452, 26), // "on_btnAlmacenFinal_clicked"
+QT_MOC_LITERAL(21, 479, 25) // "on_btnSupervisor1_clicked"
+>>>>>>> parent of a0063cf... check
 
     },
     "MainWindow\0on_btnAlmacen_clicked\0\0"
@@ -153,6 +172,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 6: _t->on_btnStart_clicked(); break;
         case 7: _t->on_btnPause_clicked(); break;
         case 8: _t->on_btnDetener_clicked(); break;
+<<<<<<< HEAD
         case 9: _t->on_btnModificar_clicked(); break;
         case 10: _t->on_btnCarrito_clicked(); break;
         case 11: _t->on_btnEnsambladora_clicked(); break;
@@ -164,6 +184,18 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 17: _t->on_btnTransporte_clicked(); break;
         case 18: _t->on_btnAlmacenFinal_clicked(); break;
         case 19: _t->on_btnSupervisor1_clicked(); break;
+=======
+        case 9: _t->on_btnCarrito_clicked(); break;
+        case 10: _t->on_btnEnsambladora_clicked(); break;
+        case 11: _t->on_btnBandaEH_clicked(); break;
+        case 12: _t->on_btnHorno_clicked(); break;
+        case 13: _t->on_btnBandaHE_clicked(); break;
+        case 14: _t->on_btnSupervisor2_clicked(); break;
+        case 15: _t->on_btnEmpacadora_clicked(); break;
+        case 16: _t->on_btnTransporte_clicked(); break;
+        case 17: _t->on_btnAlmacenFinal_clicked(); break;
+        case 18: _t->on_btnSupervisor1_clicked(); break;
+>>>>>>> parent of a0063cf... check
         default: ;
         }
     }

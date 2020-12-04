@@ -15,14 +15,8 @@ public:
     explicit parametros(QWidget *parent = nullptr);
     ~parametros();
 
-private slots:
-    void on_buttonBox_accepted();
-
-    void on_buttonBox_rejected();
-
 private:
     Ui::parametros *ui;
-
 };
 
 #endif // PARAMETROS_H
