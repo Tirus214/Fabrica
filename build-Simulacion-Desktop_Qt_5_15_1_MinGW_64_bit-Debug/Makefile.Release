@@ -489,6 +489,10 @@ release/moc_mainwindow.cpp: ../Simulacion/mainwindow.h \
 		../Simulacion/nodotransporte.h \
 		../Simulacion/transporte.h \
 		../Simulacion/almacenfinal.h \
+		../Simulacion/parametros.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialog \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
+		../Simulacion/solicitar.h \
 		release/moc_predefs.h \
 		C:/Qt/5.15.1/mingw81_64/bin/moc.exe
 	C:\Qt\5.15.1\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/x/Documents/GitHub/Fabrica/build-Simulacion-Desktop_Qt_5_15_1_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/5.15.1/mingw81_64/mkspecs/win32-g++ -IC:/Users/x/Documents/GitHub/Fabrica/Simulacion -IC:/Qt/5.15.1/mingw81_64/include -IC:/Qt/5.15.1/mingw81_64/include/QtWidgets -IC:/Qt/5.15.1/mingw81_64/include/QtGui -IC:/Qt/5.15.1/mingw81_64/include/QtANGLE -IC:/Qt/5.15.1/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\Simulacion\mainwindow.h -o release\moc_mainwindow.cpp
@@ -1182,7 +1186,9 @@ release/almacenfinal.o: ../Simulacion/almacenfinal.cpp ../Simulacion/almacenfina
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qguiapplication.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qinputmethod.h \
-		../Simulacion/receta.h
+		../Simulacion/receta.h \
+		../Simulacion/listasimplestring.h \
+		../Simulacion/nodostring.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\almacenfinal.o ..\Simulacion\almacenfinal.cpp
 
 release/bandaeh.o: ../Simulacion/bandaeh.cpp ../Simulacion/bandaeh.h \
@@ -4023,7 +4029,9 @@ release/listasimpletransporte.o: ../Simulacion/listasimpletransporte.cpp ../Simu
 		../Simulacion/nodopaquete.h \
 		../Simulacion/paquete.h \
 		../Simulacion/receta.h \
-		../Simulacion/almacenfinal.h
+		../Simulacion/almacenfinal.h \
+		../Simulacion/listasimplestring.h \
+		../Simulacion/nodostring.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\listasimpletransporte.o ..\Simulacion\listasimpletransporte.cpp
 
 release/main.o: ../Simulacion/main.cpp ../Simulacion/Estructuras.h \
@@ -4295,7 +4303,11 @@ release/main.o: ../Simulacion/main.cpp ../Simulacion/Estructuras.h \
 		../Simulacion/listasimpletransporte.h \
 		../Simulacion/nodotransporte.h \
 		../Simulacion/transporte.h \
-		../Simulacion/almacenfinal.h
+		../Simulacion/almacenfinal.h \
+		../Simulacion/parametros.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialog \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
+		../Simulacion/solicitar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\Simulacion\main.cpp
 
 release/mainwindow.o: ../Simulacion/mainwindow.cpp ../Simulacion/mainwindow.h \
@@ -4567,28 +4579,16 @@ release/mainwindow.o: ../Simulacion/mainwindow.cpp ../Simulacion/mainwindow.h \
 		../Simulacion/nodotransporte.h \
 		../Simulacion/transporte.h \
 		../Simulacion/almacenfinal.h \
-		ui_mainwindow.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QIcon \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMenuBar \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmenu.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qaction.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QStatusBar \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QWidget \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPixmap \
-		../Simulacion/dialogalmacen.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
 		../Simulacion/parametros.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialog \
-		../Simulacion/solicitar.h
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
+		../Simulacion/solicitar.h \
+		ui_mainwindow.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPixmap \
+		../Simulacion/dialogalmacen.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QWidget \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\Simulacion\mainwindow.cpp
 
 release/mezcladora.o: ../Simulacion/mezcladora.cpp ../Simulacion/mezcladora.h \
@@ -5413,7 +5413,9 @@ release/nodotransporte.o: ../Simulacion/nodotransporte.cpp ../Simulacion/nodotra
 		../Simulacion/nodopaquete.h \
 		../Simulacion/paquete.h \
 		../Simulacion/receta.h \
-		../Simulacion/almacenfinal.h
+		../Simulacion/almacenfinal.h \
+		../Simulacion/listasimplestring.h \
+		../Simulacion/nodostring.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\nodotransporte.o ..\Simulacion\nodotransporte.cpp
 
 release/paquete.o: ../Simulacion/paquete.cpp ../Simulacion/paquete.h \
@@ -5796,18 +5798,7 @@ release/parametros.o: ../Simulacion/parametros.cpp ../Simulacion/parametros.h \
 		../Simulacion/nodotransporte.h \
 		../Simulacion/transporte.h \
 		../Simulacion/almacenfinal.h \
-		ui_parametros.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QTextEdit \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qtextedit.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextdocument.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpen.h
+		ui_parametros.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\parametros.o ..\Simulacion\parametros.cpp
 
 release/planificador.o: ../Simulacion/planificador.cpp ../Simulacion/planificador.h \
@@ -6198,22 +6189,7 @@ release/solicitar.o: ../Simulacion/solicitar.cpp ../Simulacion/solicitar.h \
 		../Simulacion/almacenfinal.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialog \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
-		ui_solicitar.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qicon.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QTextEdit \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qtextedit.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextdocument.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpen.h
+		ui_solicitar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\solicitar.o ..\Simulacion\solicitar.cpp
 
 release/supervisor.o: ../Simulacion/supervisor.cpp ../Simulacion/supervisor.h \
@@ -6710,7 +6686,9 @@ release/transporte.o: ../Simulacion/transporte.cpp ../Simulacion/transporte.h \
 		../Simulacion/nodopaquete.h \
 		../Simulacion/paquete.h \
 		../Simulacion/receta.h \
-		../Simulacion/almacenfinal.h
+		../Simulacion/almacenfinal.h \
+		../Simulacion/listasimplestring.h \
+		../Simulacion/nodostring.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\transporte.o ..\Simulacion\transporte.cpp
 
 release/moc_mainwindow.o: release/moc_mainwindow.cpp 
