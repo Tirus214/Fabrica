@@ -187,7 +187,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Ensambladora</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btnBandaHE">
@@ -200,7 +200,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>bandaHE</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btnSupervisor1">
@@ -213,7 +213,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Supervisor1</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btnEmpacadora">
@@ -226,7 +226,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Empacadora</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btnTransporte">
@@ -239,7 +239,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Transporte</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btnBandaEH">
@@ -252,7 +252,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Banda EH</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btnHorno">
@@ -265,7 +265,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Horno</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btnAlmacenFinal">
@@ -278,7 +278,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Almacen Final</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btnResumen">
@@ -291,7 +291,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Resumen de produccion</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btnSupervisor2">
@@ -304,7 +304,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Supervisor2</string>
+     <string/>
     </property>
    </widget>
   </widget>

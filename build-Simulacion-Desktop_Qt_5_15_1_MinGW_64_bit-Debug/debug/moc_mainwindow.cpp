@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[22];
-    char stringdata0[505];
+    char stringdata0[502];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -48,12 +48,12 @@ QT_MOC_LITERAL(12, 258, 26), // "on_btnEnsambladora_clicked"
 QT_MOC_LITERAL(13, 285, 21), // "on_btnBandaEH_clicked"
 QT_MOC_LITERAL(14, 307, 19), // "on_btnHorno_clicked"
 QT_MOC_LITERAL(15, 327, 21), // "on_btnBandaHE_clicked"
-QT_MOC_LITERAL(16, 349, 26), // "on_btnSupervisores_clicked"
-QT_MOC_LITERAL(17, 376, 25), // "on_btnSupervisor2_clicked"
-QT_MOC_LITERAL(18, 402, 24), // "on_btnEmpacadora_clicked"
-QT_MOC_LITERAL(19, 427, 24), // "on_btnTransporte_clicked"
-QT_MOC_LITERAL(20, 452, 26), // "on_btnAlmacenFinal_clicked"
-QT_MOC_LITERAL(21, 479, 25) // "on_btnSupervisor1_clicked"
+QT_MOC_LITERAL(16, 349, 25), // "on_btnSupervisor2_clicked"
+QT_MOC_LITERAL(17, 375, 24), // "on_btnEmpacadora_clicked"
+QT_MOC_LITERAL(18, 400, 24), // "on_btnTransporte_clicked"
+QT_MOC_LITERAL(19, 425, 26), // "on_btnAlmacenFinal_clicked"
+QT_MOC_LITERAL(20, 452, 25), // "on_btnSupervisor1_clicked"
+QT_MOC_LITERAL(21, 478, 23) // "on_btnModificar_clicked"
 
     },
     "MainWindow\0on_btnAlmacen_clicked\0\0"
@@ -66,12 +66,12 @@ QT_MOC_LITERAL(21, 479, 25) // "on_btnSupervisor1_clicked"
     "on_btnDetener_clicked\0on_btnCarrito_clicked\0"
     "on_btnEnsambladora_clicked\0"
     "on_btnBandaEH_clicked\0on_btnHorno_clicked\0"
-    "on_btnBandaHE_clicked\0on_btnSupervisores_clicked\0"
-    "on_btnSupervisor2_clicked\0"
+    "on_btnBandaHE_clicked\0on_btnSupervisor2_clicked\0"
     "on_btnEmpacadora_clicked\0"
     "on_btnTransporte_clicked\0"
     "on_btnAlmacenFinal_clicked\0"
-    "on_btnSupervisor1_clicked"
+    "on_btnSupervisor1_clicked\0"
+    "on_btnModificar_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -160,6 +160,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 16: _t->on_btnTransporte_clicked(); break;
         case 17: _t->on_btnAlmacenFinal_clicked(); break;
         case 18: _t->on_btnSupervisor1_clicked(); break;
+        case 19: _t->on_btnModificar_clicked(); break;
         default: ;
         }
     }

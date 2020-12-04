@@ -12,3 +12,13 @@ parametros::~parametros()
 {
     delete ui;
 }
+
+void parametros::on_buttonBox_accepted()
+{
+    // Aqui hay que guardar los valores
+}
+
+void parametros::on_buttonBox_rejected()
+{
+    this->close();
+}
