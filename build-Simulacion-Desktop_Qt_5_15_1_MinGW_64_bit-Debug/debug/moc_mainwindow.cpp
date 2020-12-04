@@ -28,6 +28,9 @@ struct qt_meta_stringdata_MainWindow_t {
 =======
     QByteArrayData data[22];
     char stringdata0[505];
+<<<<<<< HEAD
+>>>>>>> parent of a0063cf... check
+=======
 >>>>>>> parent of a0063cf... check
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
@@ -73,6 +76,9 @@ QT_MOC_LITERAL(18, 402, 24), // "on_btnEmpacadora_clicked"
 QT_MOC_LITERAL(19, 427, 24), // "on_btnTransporte_clicked"
 QT_MOC_LITERAL(20, 452, 26), // "on_btnAlmacenFinal_clicked"
 QT_MOC_LITERAL(21, 479, 25) // "on_btnSupervisor1_clicked"
+<<<<<<< HEAD
+>>>>>>> parent of a0063cf... check
+=======
 >>>>>>> parent of a0063cf... check
 
     },
@@ -195,6 +201,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 16: _t->on_btnTransporte_clicked(); break;
         case 17: _t->on_btnAlmacenFinal_clicked(); break;
         case 18: _t->on_btnSupervisor1_clicked(); break;
+<<<<<<< HEAD
+>>>>>>> parent of a0063cf... check
+=======
 >>>>>>> parent of a0063cf... check
         default: ;
         }
