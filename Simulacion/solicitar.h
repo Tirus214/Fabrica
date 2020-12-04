@@ -1,6 +1,6 @@
 #ifndef SOLICITAR_H
 #define SOLICITAR_H
-
+#include "fabrica.h"
 #include <QDialog>
 
 namespace Ui {
@@ -15,8 +15,12 @@ public:
     explicit solicitar(QWidget *parent = nullptr);
     ~solicitar();
 
+private slots:
+    void on_btnIncluir_clicked();
+
 private:
     Ui::solicitar *ui;
+    Fabrica *_fabrica;
 };
 
 #endif // SOLICITAR_H

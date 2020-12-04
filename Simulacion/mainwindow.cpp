@@ -3,6 +3,7 @@
 #include <QPixmap>
 #include "dialogalmacen.h"
 #include <QMessageBox>
+#include "parametros.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -23,26 +24,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnBarraTransporte1->setIconSize(QSize(100,100));
     ui->btnBarraTransporte2->setIcon(QIcon("C:/Imagenes/bandaTransportadora.png"));
     ui->btnBarraTransporte2->setIconSize(QSize(100,100));
-    ui->btnEnsambladora->setIcon(QIcon("C:/Imagenes/ensambladora.png"));
-    ui->btnEnsambladora->setIconSize(QSize(70,70));
-    ui->btnBandaEH->setIcon(QIcon("C:/Imagenes/bandaTransportadora.png"));
-    ui->btnBandaEH->setIconSize(QSize(90,90));
-    ui->btnHorno->setIcon(QIcon("C:/Imagenes/horno.svg"));
-    ui->btnHorno->setIconSize(QSize(90,90));
-    ui->btnBandaHE->setIcon(QIcon("C:/Imagenes/bandaTransportadora.png"));
-    ui->btnBandaHE->setIconSize(QSize(120,100));
-    ui->btnSupervisor1->setIcon(QIcon("C:/Imagenes/supervisores.png"));
-    ui->btnSupervisor1->setIconSize(QSize(90,90));
-    ui->btnSupervisor2->setIcon(QIcon("C:/Imagenes/supervisores.png"));
-    ui->btnSupervisor2->setIconSize(QSize(90,90));
-    ui->btnEmpacadora->setIcon(QIcon("C:/Imagenes/empacadora.png"));
-    ui->btnEmpacadora->setIconSize(QSize(120,120));
-    ui->btnTransporte->setIcon(QIcon("C:/Imagenes/montacarga.png"));
-    ui->btnTransporte->setIconSize(QSize(100,100));
-    ui->btnAlmacenFinal->setIcon(QIcon("C:/Imagenes/almacenFinal.png"));
-    ui->btnAlmacenFinal->setIconSize(QSize(100,100));
-    ui->btnResumen->setIcon(QIcon("C:/Imagenes/resumen.png"));
-    ui->btnResumen->setIconSize(QSize(120,120));
 }
 
 MainWindow::~MainWindow()
@@ -64,6 +45,10 @@ void MainWindow::on_btnPause_clicked()
 void MainWindow::on_btnDetener_clicked()
 {
     fabrica.detener();
+}
+
+void MainWindow::on_btnModificar_clicked(){
+    
 }
 
 void MainWindow::on_btnAlmacen_clicked()
@@ -233,13 +218,4 @@ void MainWindow::on_btnSupervisor1_clicked()
         estadoStr = "OFF";
     }
     ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nProbabilidad de exito: %3\nCantidad de galletas defectuosas: %4").arg(estadoStr).arg(fabrica.supervisor1->velocidad).arg(fabrica.supervisor1->probabilidad).arg(fabrica.supervisor1->galletasMalas));
-}
-
-void MainWindow::on_btnModificar_clicked()
-{
-    this->hide();
-    parametros ventanaParametros;
-    ventanaParametros.setModal(true);
-    ventanaParametros.exec();
-    this->show();
 }
