@@ -58,6 +58,11 @@ public:
         return tmp;
     }
 
+    // ==== setters ====
+    void setVelocidad(double);
+    void setMaximo(int);
+    // =================
+
     void run(){
         while(running){
             if(estado && cantidad > 0){

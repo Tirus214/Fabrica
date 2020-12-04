@@ -12,7 +12,7 @@ SOURCES += \
     almacen.cpp \
     almacenfinal.cpp \
     bandaeh.cpp \
-    bandaeh.cpp \
+    # bandaeh.cpp \
     bandahe.cpp \
     bandame.cpp \
     bandeja.cpp \

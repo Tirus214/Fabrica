@@ -56,6 +56,12 @@ public:
         mezcla = 0;
     }
 
+    // ==== setters ====
+    void setVelocidad(double);
+    void setMaximo(int);
+    void setMinimo(int);
+    // =================
+
     void run(){
         while(running){
             sleep(velocidad);
