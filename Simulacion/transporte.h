@@ -61,7 +61,7 @@ public:
     void run(){
         while(running){
             sleep(velocidad);
-            if(estado && cantidad > 0){
+            if(estado && cantidad == cantMax){
                 almacen->addPaquete(ubicarPedido()->paquete);
                 cantidad--;
             }

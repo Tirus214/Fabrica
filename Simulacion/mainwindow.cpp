@@ -3,12 +3,9 @@
 #include <QPixmap>
 #include "dialogalmacen.h"
 #include <QMessageBox>
-<<<<<<< Updated upstream
 #include "parametros.h"
 #include "solicitar.h"
-=======
 
->>>>>>> Stashed changes
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -210,11 +207,7 @@ void MainWindow::on_btnEmpacadora_clicked()
 
 void MainWindow::on_btnTransporte_clicked()
 {
-    NodoTransporte * tmp = fabrica.empacadora->listaTransporte->primerNodo;
-    while(!tmp->transporte->estado || tmp != NULL){
-        tmp = tmp->siguiente;
-    }
-    if(tmp == NULL) tmp = fabrica.empacadora->listaTransporte->primerNodo;
+    NodoTransporte * tmp = fabrica.empacadora->transporteActivo();
 
     QString estadoStr = "Indef";
     if (tmp->transporte->estado == true) {
@@ -249,7 +242,6 @@ void MainWindow::on_btnSupervisor1_clicked()
     ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nProbabilidad de exito: %3\nCantidad de galletas defectuosas: %4").arg(estadoStr).arg(fabrica.supervisor1->velocidad).arg(fabrica.supervisor1->probabilidad).arg(fabrica.supervisor1->galletasMalas));
 }
 
-<<<<<<< Updated upstream
 void MainWindow::on_btnConfigurar_clicked()
 {
     this->hide();
@@ -258,7 +250,8 @@ void MainWindow::on_btnConfigurar_clicked()
     ventanaSolicitar.setModal(true);
     ventanaSolicitar.exec();
     this->show();
-=======
+}
+
 void MainWindow::on_btnResumen_clicked(){
     ui->lblEstado->setText(QStringLiteral("Total de galletas: %1\n").arg(fabrica.almacenFinal->galletas));
     NodoString * tmp = fabrica.almacenFinal->listaString->primerNodo;
@@ -268,5 +261,5 @@ void MainWindow::on_btnResumen_clicked(){
     ui->lblEstado->setText(QStringLiteral("Masa utilizada: %1\nChocolate utilizado %2\n")
                            .arg(fabrica.almacenFinal->galletas * fabrica.planificador->receta->harina)
                            .arg(fabrica.almacenFinal->galletas * fabrica.planificador->receta->chocolate));
->>>>>>> Stashed changes
+
 }

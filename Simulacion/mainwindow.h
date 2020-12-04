@@ -64,11 +64,9 @@ private slots:
 
     void on_btnSupervisor1_clicked();
 
-<<<<<<< Updated upstream
     void on_btnConfigurar_clicked();
-=======
+
     void on_btnResumen_clicked();
->>>>>>> Stashed changes
 
 private:
     Ui::MainWindow *ui;
