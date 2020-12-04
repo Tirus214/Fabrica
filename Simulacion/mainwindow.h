@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 #include <QMainWindow>
 #include "fabrica.h"
+#include "parametros.h"
+#include "solicitar.h"
 
 
 
@@ -62,7 +64,11 @@ private slots:
 
     void on_btnSupervisor1_clicked();
 
+<<<<<<< Updated upstream
     void on_btnConfigurar_clicked();
+=======
+    void on_btnResumen_clicked();
+>>>>>>> Stashed changes
 
 private:
     Ui::MainWindow *ui;

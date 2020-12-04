@@ -3,8 +3,12 @@
 #include <QPixmap>
 #include "dialogalmacen.h"
 #include <QMessageBox>
+<<<<<<< Updated upstream
 #include "parametros.h"
 #include "solicitar.h"
+=======
+
+>>>>>>> Stashed changes
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -25,30 +29,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnBarraTransporte1->setIconSize(QSize(100,100));
     ui->btnBarraTransporte2->setIcon(QIcon("C:/Imagenes/bandaTransportadora.png"));
     ui->btnBarraTransporte2->setIconSize(QSize(100,100));
-    ui->btnEnsambladora->setIcon(QIcon("C:/Imagenes/ensambladora.png"));
-    ui->btnEnsambladora->setIconSize(QSize(70,70));
-    ui->btnBandaEH->setIcon(QIcon("C:/Imagenes/bandaTransportadora.png"));
-    ui->btnBandaEH->setIconSize(QSize(90,90));
-    ui->btnHorno->setIcon(QIcon("C:/Imagenes/horno.svg"));
-    ui->btnHorno->setIconSize(QSize(90,90));
-    ui->btnBandaHE->setIcon(QIcon("C:/Imagenes/bandaTransportadora.png"));
-    ui->btnBandaHE->setIconSize(QSize(120,100));
-    ui->btnSupervisor1->setIcon(QIcon("C:/Imagenes/supervisores.png"));
-    ui->btnSupervisor1->setIconSize(QSize(90,90));
-    ui->btnSupervisor2->setIcon(QIcon("C:/Imagenes/supervisores.png"));
-    ui->btnSupervisor2->setIconSize(QSize(90,90));
-    ui->btnEmpacadora->setIcon(QIcon("C:/Imagenes/empacadora.png"));
-    ui->btnEmpacadora->setIconSize(QSize(120,120));
-    ui->btnTransporte->setIcon(QIcon("C:/Imagenes/montacarga.png"));
-    ui->btnTransporte->setIconSize(QSize(100,100));
-    ui->btnAlmacenFinal->setIcon(QIcon("C:/Imagenes/almacenFinal.png"));
-    ui->btnAlmacenFinal->setIconSize(QSize(100,100));
-    ui->btnResumen->setIcon(QIcon("C:/Imagenes/resumen.png"));
-    ui->btnResumen->setIconSize(QSize(120,120));
 }
 
 MainWindow::~MainWindow()
-{ 
+{
     delete ui;
 }
 
@@ -226,12 +210,32 @@ void MainWindow::on_btnEmpacadora_clicked()
 
 void MainWindow::on_btnTransporte_clicked()
 {
-    // falta agregar un transporte en fabrica.h creo
+    NodoTransporte * tmp = fabrica.empacadora->listaTransporte->primerNodo;
+    while(!tmp->transporte->estado || tmp != NULL){
+        tmp = tmp->siguiente;
+    }
+    if(tmp == NULL) tmp = fabrica.empacadora->listaTransporte->primerNodo;
+
+    QString estadoStr = "Indef";
+    if (tmp->transporte->estado == true) {
+        estadoStr = "ON";
+    } else if (tmp->transporte->estado == false) {
+        estadoStr = "OFF";
+    }
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad de paquetes actual: %3\nCantidad maxima de paquetes: %4")
+                           .arg(estadoStr)
+                           .arg(tmp->transporte->velocidad)
+                           .arg(tmp->transporte->cantidad)
+                           .arg(tmp->transporte->cantMax));
 }
 
 void MainWindow::on_btnAlmacenFinal_clicked()
 {
-    // agregar aqui o en AlmacenFinal un metodo para sacar la cantidad de galletas introducidas
+    ui->lblEstado->setText(QStringLiteral("Total de galletas: %1\n").arg(fabrica.almacenFinal->galletas));
+    NodoString * tmp = fabrica.almacenFinal->listaString->primerNodo;
+    while(tmp != NULL){
+        ui->lblEstado->setText(QStringLiteral("Paquete: %1\tCantidad: %2\n").arg(tmp->nombre).arg(tmp->dato));
+    }
 }
 
 void MainWindow::on_btnSupervisor1_clicked()
@@ -245,6 +249,7 @@ void MainWindow::on_btnSupervisor1_clicked()
     ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nProbabilidad de exito: %3\nCantidad de galletas defectuosas: %4").arg(estadoStr).arg(fabrica.supervisor1->velocidad).arg(fabrica.supervisor1->probabilidad).arg(fabrica.supervisor1->galletasMalas));
 }
 
+<<<<<<< Updated upstream
 void MainWindow::on_btnConfigurar_clicked()
 {
     this->hide();
@@ -253,4 +258,15 @@ void MainWindow::on_btnConfigurar_clicked()
     ventanaSolicitar.setModal(true);
     ventanaSolicitar.exec();
     this->show();
+=======
+void MainWindow::on_btnResumen_clicked(){
+    ui->lblEstado->setText(QStringLiteral("Total de galletas: %1\n").arg(fabrica.almacenFinal->galletas));
+    NodoString * tmp = fabrica.almacenFinal->listaString->primerNodo;
+    while(tmp != NULL){
+        ui->lblEstado->setText(QStringLiteral("Paquete: %1\tCantidad: %2\n").arg(tmp->nombre).arg(tmp->dato));
+    }
+    ui->lblEstado->setText(QStringLiteral("Masa utilizada: %1\nChocolate utilizado %2\n")
+                           .arg(fabrica.almacenFinal->galletas * fabrica.planificador->receta->harina)
+                           .arg(fabrica.almacenFinal->galletas * fabrica.planificador->receta->chocolate));
+>>>>>>> Stashed changes
 }

@@ -60,6 +60,7 @@ public:
 
     void run(){
         while(running){
+            sleep(velocidad);
             if(estado && cantidad > 0){
                 almacen->addPaquete(ubicarPedido()->paquete);
                 cantidad--;
