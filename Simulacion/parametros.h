@@ -2,6 +2,7 @@
 #define PARAMETROS_H
 #include "planificador.h"
 #include <QDialog>
+#include "fabrica.h"
 
 namespace Ui {
 class parametros;
@@ -15,6 +16,8 @@ public:
     explicit parametros(QWidget *parent = nullptr);
     ~parametros();
 
+    void setPunteroFabrica(Fabrica *);
+
 private slots:
     void on_buttonBox_accepted();
 
@@ -22,6 +25,7 @@ private slots:
 
 private:
     Ui::parametros *ui;
+    Fabrica * refFabrica;
 };
 
 #endif // PARAMETROS_H

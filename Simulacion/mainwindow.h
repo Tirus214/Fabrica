@@ -16,6 +16,7 @@ class MainWindow : public QMainWindow
 public:
 
     Fabrica fabrica;
+    Fabrica * ptoFabrica = &fabrica;
 
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -60,6 +61,8 @@ private slots:
     void on_btnAlmacenFinal_clicked();
 
     void on_btnSupervisor1_clicked();
+
+    void on_btnConfigurar_clicked();
 
 private:
     Ui::MainWindow *ui;

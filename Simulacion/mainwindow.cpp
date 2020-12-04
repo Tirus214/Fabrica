@@ -4,6 +4,7 @@
 #include "dialogalmacen.h"
 #include <QMessageBox>
 #include "parametros.h"
+#include "solicitar.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -242,4 +243,14 @@ void MainWindow::on_btnSupervisor1_clicked()
         estadoStr = "OFF";
     }
     ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nProbabilidad de exito: %3\nCantidad de galletas defectuosas: %4").arg(estadoStr).arg(fabrica.supervisor1->velocidad).arg(fabrica.supervisor1->probabilidad).arg(fabrica.supervisor1->galletasMalas));
+}
+
+void MainWindow::on_btnConfigurar_clicked()
+{
+    this->hide();
+    solicitar ventanaSolicitar;
+    ventanaSolicitar.setPunteroFabrica(ptoFabrica);
+    ventanaSolicitar.setModal(true);
+    ventanaSolicitar.exec();
+    this->show();
 }

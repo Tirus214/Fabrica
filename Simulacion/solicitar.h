@@ -15,12 +15,16 @@ public:
     explicit solicitar(QWidget *parent = nullptr);
     ~solicitar();
 
+
+    void setPunteroFabrica(Fabrica *);
+
 private slots:
     void on_btnIncluir_clicked();
 
+
 private:
     Ui::solicitar *ui;
-    Fabrica *_fabrica;
+    Fabrica * refFabrica;
 };
 
 #endif // SOLICITAR_H

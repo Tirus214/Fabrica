@@ -18,5 +18,9 @@ void solicitar::on_btnIncluir_clicked()
     int cantidadPaquetes = ui->txtCant->textCursor().selectedText().toInt();
     int cantidadGalletas = ui->txtCantGallet->textCursor().selectedText().toInt();
     QString nombrePaquete = ui->txtNombre->textCursor().selectedText();
+    refFabrica->planificador->addPeticion(cantidadPaquetes,nombrePaquete,cantidadGalletas);
+}
 
+void solicitar::setPunteroFabrica(Fabrica * _refFabrica) {
+    this->refFabrica = _refFabrica;
 }
