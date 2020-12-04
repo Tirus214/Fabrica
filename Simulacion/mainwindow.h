@@ -1,8 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include <QMainWindow>
+#include "dialogalmacen.h"
 #include "fabrica.h"
-#include "parametros.h"
+
 
 
 QT_BEGIN_NAMESPACE
@@ -49,6 +50,8 @@ private slots:
 
     void on_btnBandaHE_clicked();
 
+    void on_btnSupervisores_clicked();
+
     void on_btnSupervisor2_clicked();
 
     void on_btnEmpacadora_clicked();
@@ -59,10 +62,8 @@ private slots:
 
     void on_btnSupervisor1_clicked();
 
-    void on_btnModificar_clicked();
-
 private:
     Ui::MainWindow *ui;
-
+    DialogAlmacen *dialogoAlmacen;
 };
 #endif // MAINWINDOW_H

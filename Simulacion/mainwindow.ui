@@ -187,7 +187,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Ensambladora</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnBandaHE">
@@ -200,7 +200,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>bandaHE</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnSupervisor1">
@@ -213,7 +213,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Supervisor1</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnEmpacadora">
@@ -226,7 +226,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Empacadora</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnTransporte">
@@ -239,7 +239,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Transporte</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnBandaEH">
@@ -252,7 +252,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Banda EH</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnHorno">
@@ -265,7 +265,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Horno</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnAlmacenFinal">
@@ -278,7 +278,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Almacen Final</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnResumen">
@@ -291,7 +291,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Resumen de produccion</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnSupervisor2">
@@ -304,7 +304,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Supervisor2</string>
     </property>
    </widget>
   </widget>
