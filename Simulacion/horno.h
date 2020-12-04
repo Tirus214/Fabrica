@@ -45,7 +45,8 @@ public:
 
     void hornear(){
         if(index == 6) index = 0;
-        bandejas[index]->cantidad += banda->desencolar();
+        if(!bandejas[index]->isFull())
+            bandejas[index]->cantidad += banda->desencolar();
         index++;
     }
 

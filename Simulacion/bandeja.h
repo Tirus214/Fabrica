@@ -23,8 +23,12 @@ public:
         estado = true;
     }
 
+    bool isFull(){
+        return cantidad == cantMax;
+    }
+
     void hornear(){
-        if(cantidad == cantMax){
+        if(isFull()){
             galletasHechas = cantidad;
             cantidad = 0;
         }
@@ -32,7 +36,7 @@ public:
 
     void run(){
         while (running) {
-            sleep(velocidad*1000);
+            sleep(velocidad);
             if (estado) {
                 hornear();
             }

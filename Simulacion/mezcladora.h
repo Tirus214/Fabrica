@@ -58,12 +58,11 @@ public:
 
     void run(){
         while(running){
-            sleep(velocidad/2);
+            sleep(velocidad);
             if(estado && mezclaHecha == 0){
                 if(mezcla == 0) pedirMateriales();
                 else hacerMezcla();
             }
-            sleep(velocidad/2);
         }
     }
 

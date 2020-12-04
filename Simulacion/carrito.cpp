@@ -1,12 +1,12 @@
 #include "carrito.h"
 
 Carrito::Carrito() {
-    cantMax = 100;
-    cantMin = 10;
-    velocidad = 10.0;
+    cantMax = 0;
+    cantMin = 0;
+    velocidad = 0.0;
     almacen = new Almacen();
     running = true;
-    peticion = 50;
+    peticion = 0;
     resultado = 0;
     estado = true;
     chocolate = true;
@@ -26,7 +26,7 @@ void Carrito::traerChocolate() {
 }
 
 void Carrito::traerHarina(){
-    if(cantMax < peticion && peticion < cantMin){
+    if(cantMax > peticion && peticion > cantMin){
         almacen->harina -= peticion;
     }
     else peticion = 0;
@@ -34,18 +34,16 @@ void Carrito::traerHarina(){
 
 void Carrito::putResultado(){
     resultado = peticion;
+    peticion = 0;
 }
 
 
 void Carrito::run(){
     while(running){
-        //sleep(velocidad/2*1000); // esto daria si le pongo 1 (como min) = 500 segundos
-        sleep(2);
+        sleep(velocidad);
         if(estado && resultado == 0){
             if(chocolate) traerChocolate();
             else if(harina) traerHarina();
-            //sleep(velocidad/2*1000);
-            sleep(2);
         }
         putResultado();
         chocolate = false;
