@@ -84,9 +84,9 @@ void MainWindow::on_btnAlmacen_clicked()
 void MainWindow::on_btnCarrito_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica->carrito->estado && fabrica->carrito->running) {
+    if (fabrica->carrito->estado) {
         estadoStr = "ON";
-    } else if (fabrica->banda2->estado == false && !fabrica->carrito->running) {
+    } else if (fabrica->banda2->estado == false) {
         estadoStr = "OFF";
     }
     ui->lblEstado->setText(QStringLiteral("Estado: %1\nCantidad Maxima: %2\nCantidad Minima: %3\nVelocidad: %4\nPeticion: %5\nCantidad transportada: %6").arg(estadoStr).arg(fabrica->carrito->cantMax).arg(fabrica->carrito->cantMin).arg(fabrica->carrito->velocidad).arg(fabrica->carrito->peticion).arg(fabrica->carrito->resultado));
@@ -95,7 +95,7 @@ void MainWindow::on_btnCarrito_clicked()
 void MainWindow::on_btnMezcladora1_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica->mezcladora1->estado == true && fabrica->mezcladora1->running) {
+    if (fabrica->mezcladora1->estado == true) {
         estadoStr = "ON";
     }
     estadoStr = "OFF";
@@ -105,7 +105,7 @@ void MainWindow::on_btnMezcladora1_pressed()
 void MainWindow::on_btnMezcladora2_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica->mezcladora2->estado == true && fabrica->mezcladora2->running) {
+    if (fabrica->mezcladora2->estado == true) {
         estadoStr = "ON";
     }
         estadoStr = "OFF";
@@ -116,7 +116,7 @@ void MainWindow::on_btnMezcladora2_pressed()
 void MainWindow::on_btnMezcladora3_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica->mezcladora3->estado == true && fabrica->mezcladora3->running) {
+    if (fabrica->mezcladora3->estado == true) {
         estadoStr = "ON";
     }
         estadoStr = "OFF";
@@ -127,7 +127,7 @@ void MainWindow::on_btnMezcladora3_pressed()
 void MainWindow::on_btnBarraTransporte1_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica->banda1->estado == true && fabrica->banda1->running) {
+    if (fabrica->banda1->estado == true) {
         estadoStr = "ON";
     }
         estadoStr = "OFF";
@@ -138,7 +138,7 @@ void MainWindow::on_btnBarraTransporte1_pressed()
 void MainWindow::on_btnBarraTransporte2_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica->banda2 ->estado == true && fabrica->banda2->running) {
+    if (fabrica->banda2 ->estado == true) {
         estadoStr = "ON";
     }
         estadoStr = "OFF";
@@ -150,7 +150,7 @@ void MainWindow::on_btnBarraTransporte2_pressed()
 void MainWindow::on_btnEnsambladora_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica->ensambladora->estado == true && fabrica->ensambladora->running) {
+    if (fabrica->ensambladora->estado == true) {
         estadoStr = "ON";
     }
         estadoStr = "OFF";
@@ -162,7 +162,7 @@ void MainWindow::on_btnEnsambladora_clicked()
 void MainWindow::on_btnBandaEH_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica->banda3 ->estado == true && fabrica->banda3->running) {
+    if (fabrica->banda3 ->estado == true) {
         estadoStr = "ON";
     }
         estadoStr = "OFF";
@@ -173,19 +173,43 @@ void MainWindow::on_btnBandaEH_clicked()
 
 void MainWindow::on_btnHorno_clicked()
 {
-    QString estadoStr = "Indef";
-    if (fabrica->horno ->estado == true && fabrica->horno->running) {
-        estadoStr = "ON";
-    }
-        estadoStr = "OFF";
+    QString b0 = "Indef";
+    if (fabrica->horno->bandejas[0]->estado == true) b0 = "ON";
+    else b0 = "OFF";
 
-    // aqui o en horno hay que hacer otra funcion que sume todas las galletas siendo horneadas
-    // y las que salen
+    QString b1 = "Indef";
+    if (fabrica->horno->bandejas[0]->estado == true) b1 = "ON";
+    else b1 = "OFF";
+
+    QString b2 = "Indef";
+    if (fabrica->horno->bandejas[0]->estado == true) b2 = "ON";
+    else b2 = "OFF";
+
+    QString b3 = "Indef";
+    if (fabrica->horno->bandejas[0]->estado == true) b3 = "ON";
+    else b3 = "OFF";
+
+    QString b4 = "Indef";
+    if (fabrica->horno->bandejas[0]->estado == true) b4 = "ON";
+    else b4 = "OFF";
+
+    QString b5 = "Indef";
+    if (fabrica->horno->bandejas[0]->estado == true) b5 = "ON";
+    else b5 = "OFF";
+
     int suma = 0;
     for (int i = 0; i < 6; i++) {
         suma +=fabrica->horno->bandejas[i]->cantidad;
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nCantidad de galletas recogidas: %2\nCantidad de galletas en el horno: %3\nCantidad de galletas horneadas: %4").arg(estadoStr).arg(suma).arg(suma).arg(fabrica->horno->galletas));
+    ui->lblEstado->setText(QStringLiteral("Estado bandeja 1: %1\n"
+                                          "Estado bandeja 2: %2\n"
+                                          "Estado bandeja 3: %3\n"
+                                          "Estado bandeja 4: %4\n"
+                                          "Estado bandeja 5: %5\n"
+                                          "Estado bandeja 6: %6\n"
+                                          "Cantidad de galletas recogidas: %7\nCantidad de galletas en el horno: %8\nCantidad de galletas horneadas: %9")
+                           .arg(b0).arg(b1).arg(b2).arg(b3).arg(b4).arg(b5)
+                           .arg(suma).arg(suma).arg(fabrica->horno->galletas));
 }
 
 
