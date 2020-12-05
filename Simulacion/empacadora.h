@@ -30,7 +30,8 @@ public:
     Empacadora(){
         planificador = new Planificador();
         transporte = new Transporte();
-        banda = new BandaHE;
+        banda = new BandaHE();
+        nodoPaquete = new NodoPaquete(new Paquete("", 0));
         index = 0;
         velocidad = 0.0;
         galletas = 0;
@@ -111,7 +112,8 @@ public:
 
     void empacar(){
         ubicarPaquete();
-        nodoPaquete->paquete->galletasHechas += galletas;   //le agrega una galleta a ese paquete
+        if(nodoPaquete == NULL) return;
+        nodoPaquete->paquete->galletasHechas = galletas;   //le agrega una galleta a ese paquete
         galletas--; //resta las galletas almacenadas;
         if(nodoPaquete->paquete->galletasHechas == nodoPaquete->paquete->cantidadGalletas){ //si el paquete se lleno incrementa el indice y lo agrega al transporte correspondiente
             index++;
@@ -125,6 +127,7 @@ public:
     // =================
 
     void run(){
+        running = true;
         nodoPaquete = planificador->lista->primerNodo;
         while(running){
             sleep(velocidad);

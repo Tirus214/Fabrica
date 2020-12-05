@@ -56,6 +56,7 @@ public:
     // =================
 
     void run(){
+        running = true;
         while(running){
             sleep(velocidad*1000);
             if( !banda->cola->vacia()){

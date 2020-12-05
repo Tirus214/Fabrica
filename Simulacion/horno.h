@@ -58,6 +58,7 @@ public:
     }
 
     void run(){
+        running = true;
         arrancar();
         while(running){
             sleep(bandejas[0]->velocidad);

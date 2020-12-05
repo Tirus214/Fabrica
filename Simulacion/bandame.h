@@ -21,9 +21,9 @@ public:
 
     BandaME(){
         cola = new Cola();
-        cantMax = 10;
+        cantMax = 0;
         index = 0;
-        velocidad = 10;
+        velocidad = 0;
         mezcladora1 = new Mezcladora();
         mezcladora2 = new Mezcladora();
         running = true;
@@ -68,6 +68,7 @@ public:
     // =================
 
     void run(){
+        running = true;
         while (running) {
             sleep(velocidad);
             if (estado && !isFull()) {

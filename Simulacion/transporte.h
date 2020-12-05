@@ -60,10 +60,11 @@ public:
 
     void entregar(){
         NodoPaquete * tmp = lista->primerNodo;
-        for(int i=0; i<=index; i++){
+        if(tmp == NULL) return;
+        do{
             almacen->addPaquete(tmp->paquete);
             tmp = tmp->siguiente;
-        }
+        } while(tmp != lista->primerNodo);
         index = 0;
         cantidad = 0;
         lista = new ListaDobleCircular();
@@ -75,6 +76,7 @@ public:
     // =================
 
     void run(){
+        running = true;
         while(running){
             sleep(velocidad);
             if(estado && cantidad == cantMax){

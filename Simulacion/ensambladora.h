@@ -59,6 +59,7 @@ public:
     // =================
 
     void run(){
+        running = true;
         while(running){
             sleep(velocidad);
             if(estado){

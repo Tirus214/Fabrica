@@ -20,12 +20,12 @@ public:
 
     BandaEH(){
         cola = new Cola();
-        cantMax = 10;
+        cantMax = 0;
         index = 0;
-        velocidad = 10;
+        velocidad = 0;
         ensambladora = new Ensambladora();
         running = true;
-        estado = false;
+        estado = true;
      }
 
     // Metodos
@@ -62,6 +62,7 @@ public:
     // =================
 
     void run(){
+        running = true;
         while (running) {
             sleep(velocidad);
             if (estado && !isFull()) {

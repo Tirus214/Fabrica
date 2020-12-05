@@ -19,8 +19,7 @@ public:
     void setPunteroFabrica(Fabrica * _refFabrica);
 
 private slots:
-    void on_buttonBox_accepted();
-    void on_buttonBox_rejected();
+    void on_buttonBox_clicked();
 
 private:
     Ui::parametros *ui;
