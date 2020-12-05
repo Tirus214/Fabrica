@@ -41,6 +41,7 @@ SOURCES += \
     transporte.cpp
 
 HEADERS += \
+    EstructuraFabrica.h \
     almacen.h \
     almacenfinal.h \
     bandaeh.h \

@@ -1,10 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QPixmap>
-#include "dialogalmacen.h"
-#include <QMessageBox>
-#include "parametros.h"
-#include "solicitar.h"
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -71,9 +67,11 @@ void MainWindow::on_btnDetener_clicked()
 
 void MainWindow::on_btnModificar_clicked(){
     parametros ventanaParametros;
-    ventanaParametros.refFabrica = fabrica;
+    ventanaParametros.fabri2 = fabri2;
     ventanaParametros.setModal(true);
     ventanaParametros.exec();
+    fabri2 = ventanaParametros.fabri2;
+    fabrica = fabri2->getFabrica();
 }
 
 void MainWindow::on_btnAlmacen_clicked()
@@ -285,10 +283,11 @@ void MainWindow::on_btnSupervisor1_clicked()
 void MainWindow::on_btnConfigurar_clicked()
 {
     solicitar ventanaSolicitar;
-    ventanaSolicitar.setPunteroFabrica(fabrica);
+    ventanaSolicitar.fabri2 = fabri2;
     ventanaSolicitar.setModal(true);
     ventanaSolicitar.exec();
-
+    fabri2 = ventanaSolicitar.fabri2;
+    fabrica = fabri2->getFabrica();
 }
 
 void MainWindow::on_btnResumen_clicked(){

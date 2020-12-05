@@ -1,6 +1,6 @@
 #ifndef SOLICITAR_H
 #define SOLICITAR_H
-#include "fabrica.h"
+#include "EstructuraFabrica.h"
 #include <QDialog>
 
 namespace Ui {
@@ -14,7 +14,8 @@ class solicitar : public QDialog
 public:
     explicit solicitar(QWidget *parent = nullptr);
     ~solicitar();
-
+    EstructuraFabrica * fabri2;
+    Fabrica * fabrica = fabri2->fabrica;
 
     void setPunteroFabrica(Fabrica *);
 

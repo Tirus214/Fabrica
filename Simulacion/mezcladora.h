@@ -35,8 +35,7 @@ public:
     }
 
     void pedirMateriales(){
-        try{
-            mutex->lock();
+
             if(nombreChocolate) carro->chocolate = true;
             else if(nombreHarina) carro->harina = true;
             carro->peticion = cantMax;
@@ -45,10 +44,6 @@ public:
                 carro->peticion = cantMin;
                 mezcla = carro->resultado;
             }
-            mutex->unlock();
-        } catch (QException) {
-
-        }
     }
 
     void hacerMezcla(){

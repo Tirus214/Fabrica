@@ -13,22 +13,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>690</y>
-     <width>181</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -276,16 +260,6 @@
     <string>Transporte</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtCarritoV">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>40</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_20">
    <property name="geometry">
     <rect>
@@ -325,430 +299,440 @@
     <string>Maximo</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtMezc1V">
+  <widget class="QPushButton" name="btnOk">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>700</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtCarritoV">
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>80</y>
-     <width>104</width>
-     <height>21</height>
+     <y>40</y>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtMezcChoV">
+  <widget class="QLineEdit" name="txtCarritoMn">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>160</y>
-     <width>104</width>
-     <height>21</height>
+     <x>450</x>
+     <y>40</y>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtBanda1V">
+  <widget class="QLineEdit" name="txtBanda1V">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>200</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtBanda2V">
+  <widget class="QLineEdit" name="txtMezcChocV">
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>240</y>
-     <width>104</width>
-     <height>21</height>
+     <y>160</y>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtMezc2V">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>120</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBanda3V">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>320</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtEnsamV">
+  <widget class="QLineEdit" name="txtEnsamV">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>280</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtBandeja1V">
+  <widget class="QLineEdit" name="txtBanda2V">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>240</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtMezc2V">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>120</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtMezc1V">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>80</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtBandeja1V">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>360</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtBandeja2V">
+  <widget class="QLineEdit" name="txtBanda3V">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>320</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtBandeja2V">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>400</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtBandeja3V">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>440</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBandeja4V">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>480</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBandeja5V">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>520</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBandeja6V">
+  <widget class="QLineEdit" name="txtBandeja6V">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>560</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtBanda4V">
+  <widget class="QLineEdit" name="txtBandeja4V">
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>600</y>
-     <width>104</width>
-     <height>21</height>
+     <y>480</y>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtSuper1V">
+  <widget class="QLineEdit" name="txtBandeja5V">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>520</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtBandeja3V">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>440</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtSuper1V">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>640</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtSuper2V">
+  <widget class="QLineEdit" name="txtBanda4V">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>600</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtEmpacV">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>720</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtSuper2V">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>680</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtEmpacV">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>720</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtTranspV">
+  <widget class="QLineEdit" name="txtTranspV">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>750</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtEnsamMx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>280</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBanda4Mx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>600</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtMezc1Mx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>80</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtCarritoMx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>40</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBanda1Mx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>200</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtMezc2Mx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>120</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtTrasnpMx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>750</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBandeja4Mx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>480</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBandeja5Mx">
+  <widget class="QLineEdit" name="txtBandeja5Mx">
    <property name="geometry">
     <rect>
      <x>310</x>
      <y>520</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtBandeja6Mx">
+  <widget class="QLineEdit" name="txtMezcChocMx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>160</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtBandeja6Mx">
    <property name="geometry">
     <rect>
      <x>310</x>
      <y>560</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtBandeja1Mx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>360</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtMezcChoMx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>160</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBanda3Mx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>320</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBandeja2Mx">
+  <widget class="QLineEdit" name="txtBandeja2Mx">
    <property name="geometry">
     <rect>
      <x>310</x>
      <y>400</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtBanda2Mx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>240</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtBandeja3Mx">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>440</y>
-     <width>104</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="txtEmpacMx">
+  <widget class="QLineEdit" name="txtEmpacMx">
    <property name="geometry">
     <rect>
      <x>310</x>
      <y>720</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtMezc1Mn">
+  <widget class="QLineEdit" name="txtSuper1Mx">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>80</y>
-     <width>104</width>
-     <height>21</height>
+     <x>310</x>
+     <y>640</y>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtCarritoMn">
+  <widget class="QLineEdit" name="txtBanda3Mx">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>310</x>
+     <y>320</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtSuper2Mx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>680</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtCarritoMx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
      <y>40</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtMezc12Mn">
+  <widget class="QLineEdit" name="txtTrasnpMx">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>310</x>
+     <y>750</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtMezc1Mx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>80</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtMezc2Mx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
      <y>120</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="txtMezcChoMn">
+  <widget class="QLineEdit" name="txtBandeja1Mx">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>310</x>
+     <y>360</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtBandeja3Mx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>440</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtBandeja4Mx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>480</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtEnsamMx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>280</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtBanda1Mx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>200</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtBanda4Mx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>600</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtBanda2Mx">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>240</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtMezc1Mn">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>80</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtMezc2Mn">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>120</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtMezcChocMn">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
      <y>160</y>
-     <width>104</width>
-     <height>21</height>
+     <width>113</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>parametros</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>parametros</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

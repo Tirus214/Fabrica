@@ -30,5 +30,5 @@ void solicitar::on_btnOk_clicked(){
     int chocolate = ui->txtChoc->textCursor().selectedText().toInt();
     refFabrica->planificador->receta->chocolate = chocolate;
     refFabrica->planificador->receta->harina = harina;
-    refFabrica->setElementos();
+    fabri2->setFabrica(fabrica);
 }

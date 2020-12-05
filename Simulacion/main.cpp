@@ -1,4 +1,5 @@
 #include "Estructuras.h"
+#include "EstructuraFabrica.h"
 
 int main(int argc, char *argv[])
 {

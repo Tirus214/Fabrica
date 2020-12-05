@@ -1,9 +1,11 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include <QMainWindow>
-#include "fabrica.h"
+#include "EstructuraFabrica.h"
 #include "parametros.h"
 #include "solicitar.h"
+#include <QPixmap>
+#include <QMessageBox>
 
 
 
@@ -17,7 +19,9 @@ class MainWindow : public QMainWindow
 
 public:
 
-    Fabrica * fabrica = new Fabrica();
+    EstructuraFabrica * fabri2 = new EstructuraFabrica;
+    Fabrica * fabrica = fabri2->getFabrica();
+
 
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
