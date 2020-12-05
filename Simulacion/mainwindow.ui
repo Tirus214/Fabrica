@@ -167,7 +167,7 @@
    <widget class="QPushButton" name="btnModificar">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>100</x>
       <y>600</y>
       <width>75</width>
       <height>23</height>
@@ -310,7 +310,7 @@
    <widget class="QPushButton" name="btnConfigurar">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>190</x>
       <y>600</y>
       <width>91</width>
       <height>23</height>

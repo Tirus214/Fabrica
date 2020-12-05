@@ -14,20 +14,19 @@ class solicitar : public QDialog
 public:
     explicit solicitar(QWidget *parent = nullptr);
     ~solicitar();
-    EstructuraFabrica * fabri2;
-    Fabrica * fabrica = fabri2->fabrica;
+    EstructuraFabrica * fabri2 = new EstructuraFabrica();
 
     void setPunteroFabrica(Fabrica *);
 
 private slots:
     void on_btnIncluir_clicked();
 
-    void on_btnOk_clicked();
+    void on_btnOk_accepted();
 
 
 private:
     Ui::solicitar *ui;
-    Fabrica * refFabrica;
+    Fabrica * refFabrica = fabri2->fabrica;
 };
 
 #endif // SOLICITAR_H

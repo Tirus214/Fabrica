@@ -57,7 +57,10 @@ void Fabrica::pausar(){
     banda2->estado = !banda2->estado;
     ensambladora->estado = !ensambladora->estado;
     banda3->estado = !banda3->estado;
-    horno->estado = !horno->estado;
+    horno->bandejas[2]->estado = !horno->bandejas[2]->estado;
+    horno->bandejas[3]->estado = !horno->bandejas[3]->estado;
+    horno->bandejas[4]->estado = !horno->bandejas[4]->estado;
+    horno->bandejas[5]->estado = !horno->bandejas[5]->estado;
     banda4->estado = !banda4->estado;
     supervisor1->estado = !supervisor1->estado;
     supervisor2->estado = !supervisor2->estado;
@@ -74,7 +77,10 @@ void Fabrica::detener(){
     banda2->running = false;
     ensambladora->running = false;
     banda3->running = false;
-    horno->running = false;
+    horno->bandejas[2]->running = false;
+    horno->bandejas[3]->running = false;
+    horno->bandejas[4]->running = false;
+    horno->bandejas[5]->running = false;
     banda4->running = false;
     supervisor1->running = false;
     supervisor2->running = false;

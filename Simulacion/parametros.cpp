@@ -24,7 +24,6 @@ void parametros::on_btnOk_clicked()
     refFabrica->mezcladora1->setVelocidad(ui->txtMezc1V->text().toDouble());
     refFabrica->mezcladora1->setMaximo(ui->txtMezc1Mx->text().toInt());
     refFabrica->mezcladora1->setMinimo(ui->txtMezc1Mn->text().toInt());
-    qDebug() << "hola\n" << refFabrica->mezcladora1->velocidad << "\nHola";
 
     refFabrica->mezcladora2->setVelocidad(ui->txtMezc2V->text().toDouble());
     refFabrica->mezcladora2->setMaximo(ui->txtMezc2Mx->text().toInt());

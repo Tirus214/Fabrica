@@ -25,10 +25,10 @@ void solicitar::setPunteroFabrica(Fabrica * _refFabrica) {
     this->refFabrica = _refFabrica;
 }
 
-void solicitar::on_btnOk_clicked(){
+void solicitar::on_btnOk_accepted(){
     int harina = ui->txtHarina->textCursor().selectedText().toInt();
     int chocolate = ui->txtChoc->textCursor().selectedText().toInt();
     refFabrica->planificador->receta->chocolate = chocolate;
     refFabrica->planificador->receta->harina = harina;
-    fabri2->setFabrica(fabrica);
+    fabri2->setFabrica(refFabrica);
 }
