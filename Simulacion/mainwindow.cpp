@@ -71,6 +71,7 @@ void MainWindow::on_btnDetener_clicked()
 
 void MainWindow::on_btnModificar_clicked(){
     parametros ventanaParametros;
+    ventanaParametros.refFabrica = fabrica;
     ventanaParametros.setModal(true);
     ventanaParametros.exec();
 }
@@ -259,11 +260,11 @@ void MainWindow::on_btnSupervisor1_clicked()
 
 void MainWindow::on_btnConfigurar_clicked()
 {
-    this->close();
     solicitar ventanaSolicitar;
     ventanaSolicitar.setPunteroFabrica(fabrica);
     ventanaSolicitar.setModal(true);
     ventanaSolicitar.exec();
+
 }
 
 void MainWindow::on_btnResumen_clicked(){

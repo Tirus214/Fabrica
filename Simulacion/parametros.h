@@ -16,6 +16,8 @@ public:
     explicit parametros(QWidget *parent = nullptr);
     ~parametros();
 
+     Fabrica * refFabrica;
+
     void setPunteroFabrica(Fabrica * _refFabrica);
 
 private slots:
@@ -23,7 +25,7 @@ private slots:
 
 private:
     Ui::parametros *ui;
-    Fabrica * refFabrica;
+
 };
 
 #endif // PARAMETROS_H
