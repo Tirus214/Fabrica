@@ -21,6 +21,8 @@ public:
 private slots:
     void on_btnIncluir_clicked();
 
+    void on_btnOk_clicked();
+
 
 private:
     Ui::solicitar *ui;

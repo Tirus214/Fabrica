@@ -22,7 +22,7 @@ QT_BEGIN_NAMESPACE
 class Ui_solicitar
 {
 public:
-    QDialogButtonBox *buttonBox;
+    QDialogButtonBox *btnOk;
     QTextEdit *txtNombre;
     QLabel *label;
     QLabel *label_2;
@@ -42,11 +42,11 @@ public:
         if (solicitar->objectName().isEmpty())
             solicitar->setObjectName(QString::fromUtf8("solicitar"));
         solicitar->resize(463, 385);
-        buttonBox = new QDialogButtonBox(solicitar);
-        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setGeometry(QRect(270, 320, 171, 32));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        btnOk = new QDialogButtonBox(solicitar);
+        btnOk->setObjectName(QString::fromUtf8("btnOk"));
+        btnOk->setGeometry(QRect(270, 320, 171, 32));
+        btnOk->setOrientation(Qt::Horizontal);
+        btnOk->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         txtNombre = new QTextEdit(solicitar);
         txtNombre->setObjectName(QString::fromUtf8("txtNombre"));
         txtNombre->setGeometry(QRect(180, 60, 104, 21));
@@ -92,8 +92,8 @@ public:
         txtChoc->setGeometry(QRect(180, 270, 104, 21));
 
         retranslateUi(solicitar);
-        QObject::connect(buttonBox, SIGNAL(accepted()), solicitar, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), solicitar, SLOT(reject()));
+        QObject::connect(btnOk, SIGNAL(accepted()), solicitar, SLOT(accept()));
+        QObject::connect(btnOk, SIGNAL(rejected()), solicitar, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(solicitar);
     } // setupUi

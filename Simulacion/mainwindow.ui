@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="btnStart">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>480</y>
+      <x>50</x>
+      <y>470</y>
       <width>81</width>
       <height>25</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="btnPause">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>480</y>
+      <x>140</x>
+      <y>470</y>
       <width>80</width>
       <height>25</height>
      </rect>
@@ -43,8 +43,8 @@
    <widget class="QPushButton" name="btnDetener">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>480</y>
+      <x>230</x>
+      <y>470</y>
       <width>80</width>
       <height>25</height>
      </rect>
@@ -167,8 +167,8 @@
    <widget class="QPushButton" name="btnModificar">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>480</y>
+      <x>180</x>
+      <y>600</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -310,14 +310,14 @@
    <widget class="QPushButton" name="btnConfigurar">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>480</y>
-      <width>81</width>
+      <x>80</x>
+      <y>600</y>
+      <width>91</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Configurar</string>
+     <string>Añadir pedido</string>
     </property>
    </widget>
   </widget>
@@ -327,7 +327,7 @@
      <x>0</x>
      <y>0</y>
      <width>1913</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

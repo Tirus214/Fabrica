@@ -24,3 +24,11 @@ void solicitar::on_btnIncluir_clicked()
 void solicitar::setPunteroFabrica(Fabrica * _refFabrica) {
     this->refFabrica = _refFabrica;
 }
+
+void solicitar::on_btnOk_clicked(){
+    int harina = ui->txtHarina->textCursor().selectedText().toInt();
+    int chocolate = ui->txtChoc->textCursor().selectedText().toInt();
+    refFabrica->planificador->receta->chocolate = chocolate;
+    refFabrica->planificador->receta->harina = harina;
+    refFabrica->setElementos();
+}

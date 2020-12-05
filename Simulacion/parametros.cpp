@@ -19,6 +19,7 @@ void parametros::on_buttonBox_accepted()
     refFabrica->carrito->setVelocidad(ui->txtCarritoV->textCursor().selectedText().toDouble());
     refFabrica->carrito->setMaximo(ui->txtCarritoMx->textCursor().selectedText().toInt());
     refFabrica->carrito->setMinimo(ui->txtCarritoMn->textCursor().selectedText().toInt());
+
     refFabrica->mezcladora1->setVelocidad(ui->txtMezc1V->textCursor().selectedText().toDouble());
     refFabrica->mezcladora1->setMaximo(ui->txtMezc1Mx->textCursor().selectedText().toInt());
     refFabrica->mezcladora1->setMinimo(ui->txtMezc1Mn->textCursor().selectedText().toInt());
@@ -74,11 +75,15 @@ void parametros::on_buttonBox_accepted()
     // -> transporte -> setVelocidad / setMaximo
     int velocidadTransporte = ui->txtTranspV->textCursor().selectedText().toInt();
     int maximoTransporte = ui->txtTrasnpMx->textCursor().selectedText().toInt();
+
+    refFabrica->empacadora->velocitadTransporte = velocidadTransporte;
+    refFabrica->empacadora->maximoTrasnporte = maximoTransporte;
 }
 
 
 void parametros::on_buttonBox_rejected()
 {
+    refFabrica->setElementos();
     this->close();
 }
 
