@@ -60,6 +60,7 @@ public:
     void run(){
         arrancar();
         while(running){
+            sleep(bandejas[0]->velocidad);
             if(estado){
                 hornear();
                 recoger();

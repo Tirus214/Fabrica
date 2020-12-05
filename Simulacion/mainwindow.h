@@ -17,8 +17,7 @@ class MainWindow : public QMainWindow
 
 public:
 
-    Fabrica fabrica;
-    Fabrica * ptoFabrica = &fabrica;
+    Fabrica * fabrica = new Fabrica();
 
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();

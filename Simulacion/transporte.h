@@ -23,7 +23,7 @@ public:
     int cantidad;
 
     Transporte(){
-        this->nombre = "";
+        nombre = "";
         cantMax = 0;
         cantMin = 0;
         velocidad = 0.0;
@@ -58,6 +58,17 @@ public:
         return tmp;
     }
 
+    void entregar(){
+        NodoPaquete * tmp = lista->primerNodo;
+        for(int i=0; i<=index; i++){
+            almacen->addPaquete(tmp->paquete);
+            tmp = tmp->siguiente;
+        }
+        index = 0;
+        cantidad = 0;
+        lista = new ListaDobleCircular();
+    }
+
     // ==== setters ====
     void setVelocidad(double);
     void setMaximo(int);
@@ -67,8 +78,7 @@ public:
         while(running){
             sleep(velocidad);
             if(estado && cantidad == cantMax){
-                almacen->addPaquete(ubicarPedido()->paquete);
-                cantidad--;
+                entregar();
             }
         }
     }

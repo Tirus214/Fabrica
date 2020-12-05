@@ -60,6 +60,7 @@ public:
 
     void run(){
         while(running){
+            sleep(velocidad);
             if(estado){
                 if(!isFull()) sacarMateriales();
                 hacerGalletas();

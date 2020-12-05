@@ -23,8 +23,10 @@ void Fabrica::setElementos(){
     supervisor1->banda = banda4;
     supervisor2->banda = banda4;
     empacadora->banda = banda4;
-    empacadora->crearTransporte(almacenFinal);
-    empacadora->putRandom();
+    empacadora->planificador = planificador;
+    //empacadora->crearTransporte(almacenFinal);
+    transporte->almacen = almacenFinal;
+    //empacadora->putRandom();
     almacenFinal->listaString = planificador->listaNombres;
 }
 
@@ -43,7 +45,7 @@ void Fabrica::correr(){
     supervisor1->start();
     supervisor2->start();
     empacadora->start();
-    empacadora->startTransportes();
+    transporte->start();
 }
 
 void Fabrica::pausar(){
@@ -60,6 +62,7 @@ void Fabrica::pausar(){
     supervisor1->estado = !supervisor1->estado;
     supervisor2->estado = !supervisor2->estado;
     empacadora->estado = !empacadora->estado;
+    transporte->estado = !transporte->estado;
 }
 
 void Fabrica::detener(){
@@ -76,7 +79,8 @@ void Fabrica::detener(){
     supervisor1->running = false;
     supervisor2->running = false;
     empacadora->running = false;
-    empacadora->stopTransportes();
+    //empacadora->stopTransportes();
+    transporte->running = false;
 }
 
 

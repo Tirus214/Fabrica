@@ -20,7 +20,7 @@ void parametros::on_buttonBox_accepted()
     refFabrica->carrito->setMaximo(ui->txtCarritoMx->textCursor().selectedText().toInt());
     refFabrica->carrito->setMinimo(ui->txtCarritoMn->textCursor().selectedText().toInt());
 
-    refFabrica->mezcladora1->setVelocidad(ui->txtMezc1V->textCursor().selectedText().toDouble());
+    /*refFabrica->mezcladora1->setVelocidad(ui->txtMezc1V->textCursor().selectedText().toDouble());
     refFabrica->mezcladora1->setMaximo(ui->txtMezc1Mx->textCursor().selectedText().toInt());
     refFabrica->mezcladora1->setMinimo(ui->txtMezc1Mn->textCursor().selectedText().toInt());
 
@@ -47,23 +47,23 @@ void parametros::on_buttonBox_accepted()
     refFabrica->ensambladora->setVelocidad(ui->txtEnsamV->textCursor().selectedText().toDouble());
     refFabrica->ensambladora->setMaximo(ui->txtEnsamMx->textCursor().selectedText().toInt());
 
-    refFabrica->horno->bandejas[1]->setVelocidad(ui->txtBandeja1V->textCursor().selectedText().toDouble());
-    refFabrica->horno->bandejas[1]->setMaximo(ui->txtBandeja1Mx->textCursor().selectedText().toInt());
+    refFabrica->horno->bandejas[0]->setVelocidad(ui->txtBandeja1V->textCursor().selectedText().toDouble());
+    refFabrica->horno->bandejas[0]->setMaximo(ui->txtBandeja1Mx->textCursor().selectedText().toInt());
 
-    refFabrica->horno->bandejas[2]->setVelocidad(ui->txtBandeja2V->textCursor().selectedText().toDouble());
-    refFabrica->horno->bandejas[2]->setMaximo(ui->txtBandeja2Mx->textCursor().selectedText().toInt());
+    refFabrica->horno->bandejas[1]->setVelocidad(ui->txtBandeja2V->textCursor().selectedText().toDouble());
+    refFabrica->horno->bandejas[1]->setMaximo(ui->txtBandeja2Mx->textCursor().selectedText().toInt());
 
-    refFabrica->horno->bandejas[3]->setVelocidad(ui->txtBandeja3V->textCursor().selectedText().toDouble());
-    refFabrica->horno->bandejas[3]->setMaximo(ui->txtBandeja3Mx->textCursor().selectedText().toInt());
+    refFabrica->horno->bandejas[2]->setVelocidad(ui->txtBandeja3V->textCursor().selectedText().toDouble());
+    refFabrica->horno->bandejas[2]->setMaximo(ui->txtBandeja3Mx->textCursor().selectedText().toInt());
 
-    refFabrica->horno->bandejas[4]->setVelocidad(ui->txtBandeja4V->textCursor().selectedText().toDouble());
-    refFabrica->horno->bandejas[4]->setMaximo(ui->txtBandeja4Mx->textCursor().selectedText().toInt());
+    refFabrica->horno->bandejas[3]->setVelocidad(ui->txtBandeja4V->textCursor().selectedText().toDouble());
+    refFabrica->horno->bandejas[3]->setMaximo(ui->txtBandeja4Mx->textCursor().selectedText().toInt());
 
-    refFabrica->horno->bandejas[5]->setVelocidad(ui->txtBandeja5V->textCursor().selectedText().toDouble());
-    refFabrica->horno->bandejas[5]->setMaximo(ui->txtBandeja5Mx->textCursor().selectedText().toInt());
+    refFabrica->horno->bandejas[4]->setVelocidad(ui->txtBandeja5V->textCursor().selectedText().toDouble());
+    refFabrica->horno->bandejas[4]->setMaximo(ui->txtBandeja5Mx->textCursor().selectedText().toInt());
 
-    refFabrica->horno->bandejas[6]->setVelocidad(ui->txtBandeja6V->textCursor().selectedText().toDouble());
-    refFabrica->horno->bandejas[6]->setMaximo(ui->txtBandeja6Mx->textCursor().selectedText().toInt());
+    refFabrica->horno->bandejas[5]->setVelocidad(ui->txtBandeja6V->textCursor().selectedText().toDouble());
+    refFabrica->horno->bandejas[5]->setMaximo(ui->txtBandeja6Mx->textCursor().selectedText().toInt());
 
     refFabrica->supervisor1->setVelocidad(ui->txtSuper1V->textCursor().selectedText().toDouble());
     refFabrica->supervisor2->setVelocidad(ui->txtSuper2V->textCursor().selectedText().toDouble());
@@ -78,6 +78,8 @@ void parametros::on_buttonBox_accepted()
 
     refFabrica->empacadora->velocitadTransporte = velocidadTransporte;
     refFabrica->empacadora->maximoTrasnporte = maximoTransporte;
+
+    refFabrica->setElementos();*/
 }
 
 
@@ -88,5 +90,5 @@ void parametros::on_buttonBox_rejected()
 }
 
 void parametros::setPunteroFabrica(Fabrica * _refFabrica) {
-    this->refFabrica = _refFabrica;
+    refFabrica = _refFabrica;
 }

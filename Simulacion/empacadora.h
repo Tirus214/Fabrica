@@ -14,7 +14,7 @@ class Empacadora : public QThread{
 public:
     Planificador * planificador;
     //Banda * banda;
-    ListaSimpleTransporte * listaTransporte;
+    Transporte * transporte;
     NodoPaquete * nodoPaquete;
     int index;
     double velocidad;
@@ -29,9 +29,8 @@ public:
 
     Empacadora(){
         planificador = new Planificador();
-        listaTransporte = new ListaSimpleTransporte();
+        transporte = new Transporte();
         banda = new BandaHE;
-        nodoPaquete = planificador->lista->primerNodo;
         index = 0;
         velocidad = 0.0;
         galletas = 0;
@@ -43,7 +42,7 @@ public:
         maximoTrasnporte = 0;
     }
 
-    void putRandom(){
+    /*void putRandom(){
         int total = 100;
         NodoString * tmp = planificador->listaNombres->primerNodo;
         while(tmp != NULL){
@@ -58,8 +57,8 @@ public:
         }
         ListaSimpleString * nueva = planificador->listaNombres->acomodar();
         planificador->listaNombres = nueva;
-    }
-
+    }*/
+/*
     void crearTransporte(AlmacenFinal * almacen){
         NodoString * tmp = planificador->listaNombres->primerNodo;
         while(tmp != NULL){
@@ -70,7 +69,7 @@ public:
             tmp = tmp->siguiente;
         }
     }
-    
+
     void startTransportes(){
         NodoTransporte * tmp = listaTransporte->primerNodo;
         while(tmp != NULL){
@@ -95,7 +94,7 @@ public:
         if(tmp == NULL) return listaTransporte->primerNodo;
         return tmp;
     }
-
+*/
     void recoger(){
         galletas += banda->desencolar();
     }
@@ -107,14 +106,7 @@ public:
     }
 
     void montarTransporte(){    //monta el paquete echo al transporte
-        NodoTransporte * tmp = listaTransporte->primerNodo;
-        while(tmp != NULL){
-            if(tmp->transporte->nombre == nodoPaquete->paquete->nombre){
-                tmp->transporte->addPaquete(nodoPaquete->paquete);
-                return;
-            }
-            tmp = tmp->siguiente;
-        }
+        transporte->addPaquete(nodoPaquete->paquete);
     }
 
     void empacar(){
@@ -133,13 +125,13 @@ public:
     // =================
 
     void run(){
+        nodoPaquete = planificador->lista->primerNodo;
         while(running){
-            sleep(velocidad/2);
+            sleep(velocidad);
             if(estado){
                 recoger();
                 empacar();
             }
-            sleep(velocidad/2);
         }
     }
 

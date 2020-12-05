@@ -16,7 +16,7 @@ public:
     explicit parametros(QWidget *parent = nullptr);
     ~parametros();
 
-    void setPunteroFabrica(Fabrica *);
+    void setPunteroFabrica(Fabrica * _refFabrica);
 
 private slots:
     void on_buttonBox_accepted();

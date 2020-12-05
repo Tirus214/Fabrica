@@ -32,6 +32,7 @@ struct Fabrica {
     Empacadora * empacadora;
     AlmacenFinal * almacenFinal;
     QMutex * mutex;
+    Transporte * transporte;
 
     Fabrica(){
         planificador = new Planificador();
@@ -51,6 +52,7 @@ struct Fabrica {
         empacadora = new Empacadora();
         almacenFinal = new AlmacenFinal();
         mutex = new QMutex();
+        transporte = new Transporte();
     }
 
     void setPlanificador(int cantGalletas, QString nombre, int cantPaquetes){
@@ -128,6 +130,11 @@ struct Fabrica {
 
     void setEmpacadora(double velocidad){
         empacadora->velocidad = velocidad;
+    }
+
+    void setTransporte(int cantMax, double velocidad){
+        transporte->velocidad = velocidad;
+        transporte->cantMax = cantMax;
     }
 
     void setElementos();

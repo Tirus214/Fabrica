@@ -55,18 +55,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_btnStart_clicked()
 {
-    fabrica.correr();
+    fabrica->correr();
 }
 
 void MainWindow::on_btnPause_clicked()
 {
-    fabrica.pausar();
+    fabrica->pausar();
 }
 
 
 void MainWindow::on_btnDetener_clicked()
 {
-    fabrica.detener();
+    fabrica->detener();
 }
 
 void MainWindow::on_btnModificar_clicked(){
@@ -77,173 +77,171 @@ void MainWindow::on_btnModificar_clicked(){
 
 void MainWindow::on_btnAlmacen_clicked()
 {
-    ui->lblEstado->setText(QStringLiteral("Cantida de chocolate restante: %1\nCantidad de harina restante: %2").arg(fabrica.almacen->chocolate).arg(fabrica.almacen->harina));
+    ui->lblEstado->setText(QStringLiteral("Cantida de chocolate restante: %1\nCantidad de harina restante: %2").arg(fabrica->almacen->chocolate).arg(fabrica->almacen->harina));
 }
 
 void MainWindow::on_btnCarrito_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica.carrito->estado == true) {
+    if (fabrica->carrito->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.banda2->estado == false) {
+    } else if (fabrica->banda2->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nCantidad Maxima: %2\nCantidad Minima: %3\nVelocidad: %4\nPeticion: %5\nCantidad transportada: %6").arg(estadoStr).arg(fabrica.carrito->cantMax).arg(fabrica.carrito->cantMin).arg(fabrica.carrito->velocidad).arg(fabrica.carrito->peticion).arg(fabrica.carrito->resultado));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nCantidad Maxima: %2\nCantidad Minima: %3\nVelocidad: %4\nPeticion: %5\nCantidad transportada: %6").arg(estadoStr).arg(fabrica->carrito->cantMax).arg(fabrica->carrito->cantMin).arg(fabrica->carrito->velocidad).arg(fabrica->carrito->peticion).arg(fabrica->carrito->resultado));
 }
 
 void MainWindow::on_btnMezcladora1_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica.mezcladora1->estado == true) {
+    if (fabrica->mezcladora1->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.mezcladora1->estado == false) {
+    } else if (fabrica->mezcladora1->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2 gramos/s\nCantidad maxima: %3\nCantidad minima: %4\nCantidad siendo mezclada: %5\nCantidad procesada: %6").arg(estadoStr).arg(fabrica.mezcladora1->velocidad).arg(fabrica.mezcladora1->cantMax).arg(fabrica.mezcladora1->cantMin).arg(fabrica.mezcladora1->mezcla).arg(fabrica.mezcladora1->mezclaHecha));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2 gramos/s\nCantidad maxima: %3\nCantidad minima: %4\nCantidad siendo mezclada: %5\nCantidad procesada: %6").arg(estadoStr).arg(fabrica->mezcladora1->velocidad).arg(fabrica->mezcladora1->cantMax).arg(fabrica->mezcladora1->cantMin).arg(fabrica->mezcladora1->mezcla).arg(fabrica->mezcladora1->mezclaHecha));
 }
 
 void MainWindow::on_btnMezcladora2_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica.mezcladora2->estado == true) {
+    if (fabrica->mezcladora2->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.mezcladora2->estado == false) {
+    } else if (fabrica->mezcladora2->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2 gramos/s\nCantidad maxima: %3\nCantidad minima: %4\nCantidad siendo mezclada: %5\nCantidad procesada: %6").arg(estadoStr).arg(fabrica.mezcladora2->velocidad).arg(fabrica.mezcladora2->cantMax).arg(fabrica.mezcladora2->cantMin).arg(fabrica.mezcladora2->mezcla).arg(fabrica.mezcladora2->mezclaHecha));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2 gramos/s\nCantidad maxima: %3\nCantidad minima: %4\nCantidad siendo mezclada: %5\nCantidad procesada: %6").arg(estadoStr).arg(fabrica->mezcladora2->velocidad).arg(fabrica->mezcladora2->cantMax).arg(fabrica->mezcladora2->cantMin).arg(fabrica->mezcladora2->mezcla).arg(fabrica->mezcladora2->mezclaHecha));
 }
 
 void MainWindow::on_btnMezcladora3_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica.mezcladora3->estado == true) {
+    if (fabrica->mezcladora3->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.mezcladora3->estado == false) {
+    } else if (fabrica->mezcladora3->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2 gramos/s\nCantidad maxima: %3\nCantidad minima: %4\nCantidad siendo mezclada: %5\nCantidad procesada: %6").arg(estadoStr).arg(fabrica.mezcladora3->velocidad).arg(fabrica.mezcladora3->cantMax).arg(fabrica.mezcladora3->cantMin).arg(fabrica.mezcladora3->mezcla).arg(fabrica.mezcladora3->mezclaHecha));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2 gramos/s\nCantidad maxima: %3\nCantidad minima: %4\nCantidad siendo mezclada: %5\nCantidad procesada: %6").arg(estadoStr).arg(fabrica->mezcladora3->velocidad).arg(fabrica->mezcladora3->cantMax).arg(fabrica->mezcladora3->cantMin).arg(fabrica->mezcladora3->mezcla).arg(fabrica->mezcladora3->mezclaHecha));
 }
 
 void MainWindow::on_btnBarraTransporte1_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica.banda1 ->estado == true) {
+    if (fabrica->banda1 ->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.banda1->estado == false) {
+    } else if (fabrica->banda1->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima: %3\nCantidad siendo procesada: %4").arg(estadoStr).arg(fabrica.banda1->velocidad).arg(fabrica.banda1->cantMax).arg(fabrica.banda1->index));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima: %3\nCantidad siendo procesada: %4").arg(estadoStr).arg(fabrica->banda1->velocidad).arg(fabrica->banda1->cantMax).arg(fabrica->banda1->index));
 }
 
 void MainWindow::on_btnBarraTransporte2_pressed()
 {
     QString estadoStr = "Indef";
-    if (fabrica.banda2 ->estado == true) {
+    if (fabrica->banda2 ->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.banda2->estado == false) {
+    } else if (fabrica->banda2->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima: %3\nCantidad siendo procesada: %4").arg(estadoStr).arg(fabrica.banda2->velocidad).arg(fabrica.banda2->cantMax).arg(fabrica.banda2->index));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima: %3\nCantidad siendo procesada: %4").arg(estadoStr).arg(fabrica->banda2->velocidad).arg(fabrica->banda2->cantMax).arg(fabrica->banda2->index));
 }
 
 
 void MainWindow::on_btnEnsambladora_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica.ensambladora->estado == true) {
+    if (fabrica->ensambladora->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.ensambladora->estado == false) {
+    } else if (fabrica->ensambladora->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima de chocolate: %3\nCantidad maxima de mezcla: %4\nCantidad de chocolate: %5\nCantidad de mezcla: %6\nCantidad de galletas hechas: %7").arg(estadoStr).arg(fabrica.ensambladora->velocidad).arg(fabrica.ensambladora->cantMaxChoc).arg(fabrica.ensambladora->cantMaxMez).arg(fabrica.ensambladora->chocolate).arg(fabrica.ensambladora->mezcla).arg(fabrica.ensambladora->galletas));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima de chocolate: %3\nCantidad maxima de mezcla: %4\nCantidad de chocolate: %5\nCantidad de mezcla: %6\nCantidad de galletas hechas: %7").arg(estadoStr).arg(fabrica->ensambladora->velocidad).arg(fabrica->ensambladora->cantMaxChoc).arg(fabrica->ensambladora->cantMaxMez).arg(fabrica->ensambladora->chocolate).arg(fabrica->ensambladora->mezcla).arg(fabrica->ensambladora->galletas));
 }
 
 
 void MainWindow::on_btnBandaEH_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica.banda3 ->estado == true) {
+    if (fabrica->banda3 ->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.banda3->estado == false) {
+    } else if (fabrica->banda3->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima soportada: %3\nCantidad de paquetes actuales en la banda: %4").arg(estadoStr).arg(fabrica.banda3->velocidad).arg(fabrica.banda3->cantMax).arg(fabrica.banda3->index));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima soportada: %3\nCantidad de paquetes actuales en la banda: %4").arg(estadoStr).arg(fabrica->banda3->velocidad).arg(fabrica->banda3->cantMax).arg(fabrica->banda3->index));
 }
 
 
 void MainWindow::on_btnHorno_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica.horno ->estado == true) {
+    if (fabrica->horno ->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.horno->estado == false) {
+    } else if (fabrica->horno->estado == false) {
         estadoStr = "OFF";
     }
     // aqui o en horno hay que hacer otra funcion que sume todas las galletas siendo horneadas
     // y las que salen
     int suma = 0;
     for (int i = 0; i < 6; i++) {
-        suma +=fabrica.horno->bandejas[i]->cantidad;
+        suma +=fabrica->horno->bandejas[i]->cantidad;
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nCantidad de galletas recogidas: %2\nCantidad de galletas en el horno: %3\nCantidad de galletas horneadas: %4").arg(estadoStr).arg(suma).arg(suma).arg(fabrica.horno->galletas));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nCantidad de galletas recogidas: %2\nCantidad de galletas en el horno: %3\nCantidad de galletas horneadas: %4").arg(estadoStr).arg(suma).arg(suma).arg(fabrica->horno->galletas));
 }
 
 
 void MainWindow::on_btnBandaHE_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica.banda4 ->estado == true) {
+    if (fabrica->banda4 ->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.banda4->estado == false) {
+    } else if (fabrica->banda4->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima soportada: %3\nCantidad de paquetes actuales en la banda: %4").arg(estadoStr).arg(fabrica.banda4->velocidad).arg(fabrica.banda4->cantMax).arg(fabrica.banda4->index));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad maxima soportada: %3\nCantidad de paquetes actuales en la banda: %4").arg(estadoStr).arg(fabrica->banda4->velocidad).arg(fabrica->banda4->cantMax).arg(fabrica->banda4->index));
 }
 
 
 void MainWindow::on_btnSupervisor2_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica.supervisor2 ->estado == true) {
+    if (fabrica->supervisor2 ->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.supervisor2->estado == false) {
+    } else if (fabrica->supervisor2->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nProbabilidad de exito: %3\nCantidad de galletas defectuosas: %4").arg(estadoStr).arg(fabrica.supervisor2->velocidad).arg(fabrica.supervisor2->probabilidad).arg(fabrica.supervisor2->galletasMalas));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nProbabilidad de exito: %3\nCantidad de galletas defectuosas: %4").arg(estadoStr).arg(fabrica->supervisor2->velocidad).arg(fabrica->supervisor2->probabilidad).arg(fabrica->supervisor2->galletasMalas));
 }
 
 void MainWindow::on_btnEmpacadora_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica.empacadora->estado == true) {
+    if (fabrica->empacadora->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.empacadora->estado == false) {
+    } else if (fabrica->empacadora->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad de galletas siendo empacadas: %3\nCantidad de paquetes empacados: %4").arg(estadoStr).arg(fabrica.empacadora->velocidad).arg(fabrica.empacadora->galletas).arg(fabrica.empacadora->index));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad de galletas siendo empacadas: %3\nCantidad de paquetes empacados: %4").arg(estadoStr).arg(fabrica->empacadora->velocidad).arg(fabrica->empacadora->galletas).arg(fabrica->empacadora->index));
 }
 
 void MainWindow::on_btnTransporte_clicked()
 {
-    NodoTransporte * tmp = fabrica.empacadora->transporteActivo();
-
     QString estadoStr = "Indef";
-    if (tmp->transporte->estado == true) {
+    if (fabrica->supervisor1 ->estado == true) {
         estadoStr = "ON";
-    } else if (tmp->transporte->estado == false) {
+    } else if (fabrica->supervisor1->estado == false) {
         estadoStr = "OFF";
     }
     ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nCantidad de paquetes actual: %3\nCantidad maxima de paquetes: %4")
                            .arg(estadoStr)
-                           .arg(tmp->transporte->velocidad)
-                           .arg(tmp->transporte->cantidad)
-                           .arg(tmp->transporte->cantMax));
+                           .arg(fabrica->transporte->velocidad)
+                           .arg(fabrica->transporte->cantidad)
+                           .arg(fabrica->transporte->cantMax));
 }
 
 void MainWindow::on_btnAlmacenFinal_clicked()
 {
-    ui->lblEstado->setText(QStringLiteral("Total de galletas: %1\n").arg(fabrica.almacenFinal->galletas));
-    NodoString * tmp = fabrica.almacenFinal->listaString->primerNodo;
+    ui->lblEstado->setText(QStringLiteral("Total de galletas: %1\n").arg(fabrica->almacenFinal->galletas));
+    NodoString * tmp = fabrica->almacenFinal->listaString->primerNodo;
     while(tmp != NULL){
         ui->lblEstado->setText(QStringLiteral("Paquete: %1\tCantidad: %2\n").arg(tmp->nombre).arg(tmp->dato));
     }
@@ -252,32 +250,30 @@ void MainWindow::on_btnAlmacenFinal_clicked()
 void MainWindow::on_btnSupervisor1_clicked()
 {
     QString estadoStr = "Indef";
-    if (fabrica.supervisor1 ->estado == true) {
+    if (fabrica->supervisor1 ->estado == true) {
         estadoStr = "ON";
-    } else if (fabrica.supervisor1->estado == false) {
+    } else if (fabrica->supervisor1->estado == false) {
         estadoStr = "OFF";
     }
-    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nProbabilidad de exito: %3\nCantidad de galletas defectuosas: %4").arg(estadoStr).arg(fabrica.supervisor1->velocidad).arg(fabrica.supervisor1->probabilidad).arg(fabrica.supervisor1->galletasMalas));
+    ui->lblEstado->setText(QStringLiteral("Estado: %1\nVelocidad: %2\nProbabilidad de exito: %3\nCantidad de galletas defectuosas: %4").arg(estadoStr).arg(fabrica->supervisor1->velocidad).arg(fabrica->supervisor1->probabilidad).arg(fabrica->supervisor1->galletasMalas));
 }
 
 void MainWindow::on_btnConfigurar_clicked()
 {
-    this->hide();
     solicitar ventanaSolicitar;
-    ventanaSolicitar.setPunteroFabrica(ptoFabrica);
+    ventanaSolicitar.setPunteroFabrica(fabrica);
     ventanaSolicitar.setModal(true);
     ventanaSolicitar.exec();
-    this->show();
 }
 
 void MainWindow::on_btnResumen_clicked(){
-    ui->lblEstado->setText(QStringLiteral("Total de galletas: %1\n").arg(fabrica.almacenFinal->galletas));
-    NodoString * tmp = fabrica.almacenFinal->listaString->primerNodo;
+    ui->lblEstado->setText(QStringLiteral("Total de galletas: %1\n").arg(fabrica->almacenFinal->galletas));
+    NodoString * tmp = fabrica->almacenFinal->listaString->primerNodo;
     while(tmp != NULL){
         ui->lblEstado->setText(QStringLiteral("Paquete: %1\tCantidad: %2\n").arg(tmp->nombre).arg(tmp->dato));
     }
     ui->lblEstado->setText(QStringLiteral("Masa utilizada: %1\nChocolate utilizado %2\n")
-                           .arg(fabrica.almacenFinal->galletas * fabrica.planificador->receta->harina)
-                           .arg(fabrica.almacenFinal->galletas * fabrica.planificador->receta->chocolate));
+                           .arg(fabrica->almacenFinal->galletas * fabrica->planificador->receta->harina)
+                           .arg(fabrica->almacenFinal->galletas * fabrica->planificador->receta->chocolate));
 
 }
