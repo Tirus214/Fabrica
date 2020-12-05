@@ -25,6 +25,26 @@ void ListaSimpleString::insertarAlInicio(QString nombre){
     }
 }
 
+void ListaSimpleString::insertarAlInicio(NodoString * nodo){
+    if (isEmpty()){
+        primerNodo = ultimoNodo = nodo;
+    }
+    else{
+            //metodo1
+        //Nodo* nuevo = new Nodo(_dato);
+        //nuevo->siguiente = primerNodo;
+        //primerNodo = nuevo;
+
+            //metodo2
+        //Nodo* nuevo = new Nodo(_dato, primerNodo);
+        //primerNodo = nuevo;
+
+            //metodo3
+        nodo->siguiente = primerNodo;
+        primerNodo = nodo;
+    }
+}
+
 
 
 
@@ -195,3 +215,39 @@ NodoString* ListaSimpleString::borrarPos(int _pos){
         return borrado;
     }
 }
+
+int ListaSimpleString::numMayor(int a, int b){
+    if(a > b) return a;
+    return b;
+}
+
+
+void ListaSimpleString::insetarAcomodado(NodoString * nodo){
+    NodoString * tmp = primerNodo;
+    if(nodo->numRandom >= tmp->numRandom){
+        nodo->siguiente = primerNodo;
+        primerNodo = nodo;
+        return;
+    }
+    else while(tmp->siguiente != NULL){
+        if(nodo->numRandom >= tmp->siguiente->numRandom){
+            nodo->siguiente = tmp->siguiente;
+            tmp->siguiente = nodo;
+            return;
+        }
+        tmp = tmp->siguiente;
+    }
+    ultimoNodo->siguiente = nodo;
+}
+
+
+ListaSimpleString * ListaSimpleString::acomodar(){
+    ListaSimpleString * nueva = new ListaSimpleString;
+    NodoString * tmp = primerNodo;
+    while(tmp != NULL){
+        nueva->insetarAcomodado(tmp);
+        tmp = tmp->siguiente;
+    }
+    return nueva;
+}
+

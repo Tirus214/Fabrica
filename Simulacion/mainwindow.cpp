@@ -70,11 +70,9 @@ void MainWindow::on_btnDetener_clicked()
 }
 
 void MainWindow::on_btnModificar_clicked(){
-    this->hide();
     parametros ventanaParametros;
     ventanaParametros.setModal(true);
     ventanaParametros.exec();
-    this->show();
 }
 
 void MainWindow::on_btnAlmacen_clicked()

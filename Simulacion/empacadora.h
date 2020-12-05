@@ -43,6 +43,23 @@ public:
         maximoTrasnporte = 0;
     }
 
+    void putRandom(){
+        int total = 100;
+        NodoString * tmp = planificador->listaNombres->primerNodo;
+        while(tmp != NULL){
+            if(tmp->siguiente == NULL) tmp->numRandom = total;
+            else{
+                std::uniform_int_distribution<int> distribution(0, total);
+                int probabilidad = distribution(*QRandomGenerator::global());
+                tmp->numRandom = probabilidad;
+                total -= probabilidad;
+            }
+            tmp = tmp->siguiente;
+        }
+        ListaSimpleString * nueva = planificador->listaNombres->acomodar();
+        planificador->listaNombres = nueva;
+    }
+
     void crearTransporte(AlmacenFinal * almacen){
         NodoString * tmp = planificador->listaNombres->primerNodo;
         while(tmp != NULL){

@@ -24,6 +24,7 @@ void Fabrica::setElementos(){
     supervisor2->banda = banda4;
     empacadora->banda = banda4;
     empacadora->crearTransporte(almacenFinal);
+    empacadora->putRandom();
     almacenFinal->listaString = planificador->listaNombres;
 }
 

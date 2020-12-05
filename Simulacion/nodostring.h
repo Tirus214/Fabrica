@@ -8,12 +8,14 @@ struct NodoString{
 
     QString nombre;
     int dato;
+    int numRandom;
     NodoString* siguiente;	//next
 
     //constructores
     NodoString(){
         nombre = "";
         dato = 0;
+        numRandom = 0;
         siguiente = NULL;
     }
 
