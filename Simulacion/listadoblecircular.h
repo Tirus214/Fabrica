@@ -26,7 +26,7 @@ struct ListaDobleCircular{
                 nuevo->anterior = primerNodo->anterior;
                 primerNodo->anterior->siguiente = primerNodo->anterior = nuevo;
             }
-        }
+    }
 
     bool isEmpty(){
         return primerNodo == NULL;

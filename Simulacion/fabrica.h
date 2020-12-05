@@ -49,7 +49,6 @@ struct Fabrica {
         supervisor1 = new Supervisor();
         supervisor2 = new Supervisor();
         empacadora = new Empacadora();
-        // creo que aqui hace falta un transporte
         almacenFinal = new AlmacenFinal();
         mutex = new QMutex();
     }

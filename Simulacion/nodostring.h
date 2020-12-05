@@ -19,11 +19,13 @@ struct NodoString{
 
     NodoString(QString nombre_){
         nombre = nombre_;
+        dato = 0;
         siguiente = NULL;
     }
 
     NodoString(QString nombre_, NodoString* nodoSiguiente){
         nombre = nombre_;
+        dato = 0;
         siguiente = nodoSiguiente;
     }
 };
